@@ -25,9 +25,7 @@ ALPHA=${10}
 LEARNING_RATE=${11}
 MAX_STEPS=${12}
 TEST_BATCH_SIZE=${13}
-TEST_FILE=${14}
-SAVE_RANKS=${15}
-SAVE=$SAVE_PATH/"$MODEL"_"$DATASET"_"$SAVE_ID$TEST_FILE"
+SAVE=$SAVE_PATH/"$MODEL"_"$DATASET"_"$SAVE_ID"
 if [ $MODE == "train" ]
 then
 
@@ -43,7 +41,7 @@ CUDA_VISIBLE_DEVICES=$GPU_DEVICE python -u $CODE_PATH/run.py --do_train \
     -g $GAMMA -a $ALPHA -adv \
     -lr $LEARNING_RATE --max_steps $MAX_STEPS \
     -save $SAVE --test_batch_size $TEST_BATCH_SIZE \
-    --test_file $TEST_FILE --save_ranks $SAVE_RANKS ${16} ${17} ${18} ${19} ${20}
+    ${14} ${15} ${16} ${17} ${18} ${19} ${20}
 
 elif [ $MODE == "valid" ]
 then

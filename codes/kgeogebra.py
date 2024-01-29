@@ -25,41 +25,6 @@ from collections import defaultdict
 MIN_NORM = 1e-8
 
 
-def givens_rotations(r, x):
-    """Givens rotations.
-
-    Args:
-        r: torch.Tensor of shape (N x d), rotation parameters
-        x: torch.Tensor of shape (N x d), points to rotate
-
-    Returns:
-        torch.Tensor os shape (N x d) representing rotation of x by r
-    """
-    hidden_dim = int(x.shape[-1] / 2)
-    givens = r
-
-    givens = givens / torch.norm(givens, p=2, dim=-1, keepdim=True).clamp_min(1e-15)
-    x_rot = givens * x + givens * torch.cat((-x[:, :, hidden_dim:], x[:, :, 0:hidden_dim]), dim=-1)
-    return x_rot
-
-
-def givens_rotations_inverse(r, x):
-    """Givens rotations.
-
-    Args:
-        r: torch.Tensor of shape (N x d), rotation parameters
-        x: torch.Tensor of shape (N x d), points to rotate
-
-    Returns:
-        torch.Tensor os shape (N x d) representing rotation of x by r
-    """
-    hidden_dim = int(x.shape[-1] / 2)
-    givens = r
-    givens = givens / torch.norm(givens, p=2, dim=-1, keepdim=True).clamp_min(1e-15)
-    x_rot = givens * x + givens * torch.cat((x[:, :, hidden_dim:], -x[:, :, 0:hidden_dim]), dim=-1)
-    return x_rot
-
-
 class KGEModel_Geo(nn.Module):
     def __init__(self, model_name, nentity, nrelation, hidden_dim, gamma,
                  double_entity_embedding=False, double_relation_embedding=False):
@@ -499,17 +464,16 @@ class KGEModel_Geo(nn.Module):
                 num_workers=max(1, args.cpu_num // 2),
                 collate_fn=TestDataset.collate_fn
             )
-            dt=pd.DataFrame(data=test_triples, columns=['h', 'r', 't'])
-            triple_frame = pd.DataFrame(data=0, columns=['h', 'r', 't', 'head-batch', 'tail-batch', 'ranks'], index=range(len(test_triples)))
-            triple_frame.loc[:, ['h', 'r', 't']] = [[h,r,t] for h,r,t in test_triples]
+            if args.save_ranks:
+                dt=pd.DataFrame(data=test_triples, columns=['h', 'r', 't'])
+                triple_frame = pd.DataFrame(data=0, columns=['h', 'r', 't', 'head-batch', 'tail-batch', 'ranks'], index=range(len(test_triples)))
+                triple_frame.loc[:, ['h', 'r', 't']] = [[h,r,t] for h,r,t in test_triples]
 
 
             test_dataset_list = [test_dataloader_head, test_dataloader_tail]
 
             logs = []
             logs_rel = defaultdict(list)  # logs for every relation
-            logs_rel_h = defaultdict(list)
-            logs_rel_t = defaultdict(list)
             step = 0
             total_steps = sum([len(dataset) for dataset in test_dataset_list])
             file = open('scoring_short.txt', 'w')
@@ -523,58 +487,42 @@ class KGEModel_Geo(nn.Module):
                         batch_size = positive_sample.size(0)
 
                         score = model((positive_sample, negative_sample), mode) # shape bs_test * ne
-                        #print(f' score {score.shape}')
-                        ###################################################
-                        score1 = score.detach().clone()
                         score += filter_bias
-                        ###################################################
 
                         # Explicitly sort all the entities to ensure that there is no test exposure bias
                         argsort = torch.argsort(score, dim=1, descending=True) # shape bs_test * ne
-                        #print(f' argsort {argsort.shape}')
-                        argsort1 = torch.argsort(score1, dim=1, descending=True)
 
                         if mode == 'head-batch':
                             positive_arg = positive_sample[:, 0]
-                            h, r, t = dt.t, dt.r, dt.h
+                            #h, r, t = dt.t, dt.r, dt.h
                         elif mode == 'tail-batch':
                             positive_arg = positive_sample[:, 2]
-                            h, r, t = dt.h, dt.r, dt.t
+                            #h, r, t = dt.h, dt.r, dt.t
                         else:
                             raise ValueError('mode %s not supported' % mode)
-                        Rel = positive_sample[:, 1]
-
-                        #print(f' score {score.shape}')
+                        #Rel = positive_sample[:, 1]
 
 
                         for i in range(batch_size):
-                            #print(f'targeted entity i {positive_arg[i].item()}')
-                            #print(f'+ve sample i {tuple(positive_sample[i].tolist())}')
-                            # Notice that argsort is not ranking
-                            mask = h == positive_arg[i].item()
-                            mask = (r == Rel[i].item()) & mask
+                            # mask = h == positive_arg[i].item()
+                            # mask = (r == Rel[i].item()) & mask
 
                             ranking = (argsort[i, :] == positive_arg[i]).nonzero()
 
                             #print(f' ranking {ranking.shape}')
-                            ranking1 = (argsort1[i, :] == positive_arg[i]).nonzero()
+                            #ranking1 = (argsort1[i, :] == positive_arg[i]).nonzero()
 
                             assert ranking.size(0) == 1
 
-                            List = t[mask].values
-
-                            if len(List)>0:
-                                rank, rank1 =[], []
-                                for v in List:
-                                    try:
-                                        rank.append(argsort[i,:].tolist().index(v))
-                                        rank1.append(argsort1[i,:].tolist().index(v))
-                                    except:
-                                        rank.append(-1)
-                                        rank1.append(-1)
-                                file.write('\nRank of connected Entities with filter bias: ' +str(rank))
-                                file.write('\nRank of connected Entities wo filter bias: ' +str(rank1))
-                            file.write('\nTop 20 : ' + str(argsort[i, :20]))
+                            # List = t[mask].values
+                            #
+                            # if len(List)>0:
+                            #     rank = []
+                            #     for v in List:
+                            #         try:
+                            #             rank.append(argsort[i,:].tolist().index(v))
+                            #         except:
+                            #             rank.append(-1)
                             rel = positive_sample[i][1].item()
 
                             # ranking + 1 is the true ranking used in evaluation metrics
@@ -582,8 +530,9 @@ class KGEModel_Geo(nn.Module):
 
                             triple_ind = tuple([int(v) for v in positive_sample[i].tolist()])
                             assert triple_ind in test_triples
-                            conds = (triple_frame.h == triple_ind[0]) & (triple_frame.r == triple_ind[1]) & (triple_frame.t == triple_ind[2])
-                            triple_frame.loc[:, mode][conds] = ranking
+                            if args.save_ranks:
+                                conds = (triple_frame.h == triple_ind[0]) & (triple_frame.r == triple_ind[1]) & (triple_frame.t == triple_ind[2])
+                                triple_frame.loc[:, mode][conds] = ranking
 
                             # selectionElt_rank = torch.sqrt(torch.abs(model.selectionElt))
                             log = {
@@ -594,26 +543,6 @@ class KGEModel_Geo(nn.Module):
                                 'HITS@3': 1.0 if ranking <= 3 else 0.0,
                                 'HITS@10': 1.0 if ranking <= 10 else 0.0,
                             }
-                            if mode == 'head-batch':
-                                log_batch_h = {
-                                    '>> Head prediction...': 1,
-                                    'Head  MRR': 1.0 / ranking,
-                                    'Head MR': float(ranking),
-                                    'Head HITS@1': 1.0 if ranking <= 1 else 0.0,
-                                    'Head HITS@3': 1.0 if ranking <= 3 else 0.0,
-                                    'Head HITS@10': 1.0 if ranking <= 10 else 0.0,
-                                }
-                                logs_rel_h[rel].append(log_batch_h)
-                            else:
-                                log_batch_t = {
-                                    '>> Tail prediction...': 1,
-                                    'Tail  MRR': 1.0 / ranking,
-                                    'Tail MR': float(ranking),
-                                    'Tail HITS@1': 1.0 if ranking <= 1 else 0.0,
-                                    'Tail HITS@3': 1.0 if ranking <= 3 else 0.0,
-                                    'Tail HITS@10': 1.0 if ranking <= 10 else 0.0,
-                                }
-                                logs_rel_t[rel].append(log_batch_t)
 
                             if args.model in ['EllipsE']:
                                 log.update(
@@ -638,24 +567,15 @@ class KGEModel_Geo(nn.Module):
 
             metrics = {}
             for metric in logs[0].keys():
-                # if metric == 'Scores':
-                #     metrics[metric + ' mean'] = sum([log[metric].mean().item() for log in logs])/len(logs)
-                #     metrics[metric + ' std'] = sum([log[metric].std().item() for log in logs]) / len(logs)
-                #     metrics[metric + ' min'] = sum([log[metric].min().item() for log in logs])/len(logs)
-                #     metrics[metric + ' max'] = sum([log[metric].max().item() for log in logs]) / len(logs)
-                #     continue
                 metrics[metric] = sum([log[metric] for log in logs]) / len(logs)
             metrics_rel = defaultdict(dict)
             metrics_rel_h, metrics_rel_t = defaultdict(dict), defaultdict(dict)
             for rel in logs_rel:
                 for metric in logs_rel[rel][0].keys():
                     metrics_rel[rel][metric] = sum([log[metric] for log in logs_rel[rel]]) / len(logs_rel[rel])
-                #for metric in logs_rel_h[rel][0].keys():
-                #    metrics_rel[rel][metric] = sum([log[metric] for log in logs_rel_h[rel]]) / len(logs_rel_h[rel])
-                #for metric in logs_rel_t[rel][0].keys():
-                #    metrics_rel[rel][metric] = sum([log[metric] for log in logs_rel_t[rel]]) / len(logs_rel_t[rel])
 
-            triple_frame.ranks = (triple_frame.loc[:, 'head-batch'] + triple_frame.loc[:, 'tail-batch'])/2
-            #triple_frame.to_csv('triples_ranked_'+args.data_path.split('/')[1]+args.model+'.csv')
+            if args.save_ranks:
+                triple_frame.ranks = (triple_frame.loc[:, 'head-batch'] + triple_frame.loc[:, 'tail-batch'])/2
+                triple_frame.to_csv('triples_ranked_'+args.data_path.split('/')[1]+args.model+'.csv')
 
         return metrics, metrics_rel

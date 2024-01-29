@@ -14,15 +14,8 @@ import numpy as np
 import torch
 
 from torch.utils.data import DataLoader
-from model import KGEModel_M
-from model0 import KGEModel
 from kgeogebra import KGEModel_Geo
-from Gravity import KGEModel_G
-from Sheets import KGEModel_Sheet
 
-# kg = 'KGEModel'
-# kg = 'KGEModel_Sheet'
-# kg = 'KGEModel_G'
 kg = 'KGEModel_Geo'
 
 
@@ -40,7 +33,7 @@ def parse_args(args=None):
     parser.add_argument('--do_train', default=True,action='store_true')
     parser.add_argument('--do_valid', default=True,action='store_true')
     parser.add_argument('--do_test', default=True, action='store_true')
-    parser.add_argument('--do_sub_test', default=True, action='store_true')
+    parser.add_argument('--do_sub_test', default=False, action='store_true')
     parser.add_argument('--evaluate_train', action='store_true', help='Evaluate on training data')
 
     parser.add_argument('--countries', action='store_true', help='Use Countries S1/S2/S3 datasets')
@@ -79,9 +72,7 @@ def parse_args(args=None):
     parser.add_argument('--nentity', type=int, default=0, help='DO NOT MANUALLY SET')
     parser.add_argument('--nrelation', type=int, default=0, help='DO NOT MANUALLY SET')
 
-    parser.add_argument('--test_file', type=str, default='',
-                        choices=['test', 'A_test', 'Aa_test', 'AC_test', 'ACS_test', 'AS_test', 'C_test', 'Cc_test', 'CS_test', 'S_test', 'Ss_test'])
-    parser.add_argument('--save_ranks', action='store_true')
+    parser.add_argument('--save_ranks', action='store_true', default='False')
 
     return parser.parse_args(args)
 
@@ -170,7 +161,6 @@ def set_logger(args):
         log_file = os.path.join(args.save_path or args.init_checkpoint, 'sub_test.log')
         #exit()
     else:
-        print('File name', args.test_file)
         log_file = os.path.join(args.save_path or args.init_checkpoint, 'test.log')
         #exit()
 
@@ -289,39 +279,9 @@ def main(args):
             double_entity_embedding=args.double_entity_embedding,
             double_relation_embedding=args.double_relation_embedding
         )
-    if args.model in ['RotateH', 'RotateH2D']:
-        kge_model = KGEModel_M(
-            model_name=args.model,
-            nentity=nentity,
-            nrelation=nrelation,
-            hidden_dim=args.hidden_dim,
-            gamma=args.gamma,
-            double_entity_embedding=args.double_entity_embedding,
-            double_relation_embedding=args.double_relation_embedding
-        )
+
     if args.model in ['EllipsE', 'EllipsE_Var', 'Butterfly_bias', 'Butterfly']:
         kge_model = KGEModel_Geo(
-            model_name=args.model,
-            nentity=nentity,
-            nrelation=nrelation,
-            hidden_dim=args.hidden_dim,
-            gamma=args.gamma,
-            double_entity_embedding=args.double_entity_embedding,
-            double_relation_embedding=args.double_relation_embedding
-        )
-
-    if args.model in ['ETrans', 'TrigoTrans', 'ERot', 'ERot1', 'CERot']:
-        kge_model = KGEModel_G(
-            model_name=args.model,
-            nentity=nentity,
-            nrelation=nrelation,
-            hidden_dim=args.hidden_dim,
-            gamma=args.gamma,
-            double_entity_embedding=args.double_entity_embedding,
-            double_relation_embedding=args.double_relation_embedding
-        )
-    if args.model in ["Sheet", "SheetSelection", "SheetEltSel"]:
-        kge_model = KGEModel_Sheet(
             model_name=args.model,
             nentity=nentity,
             nrelation=nrelation,
