@@ -1,0 +1,344 @@
+1.10.2
+Start Evaluation on Test Data Set......
+2024-01-28 21:56:25,359 INFO     Model: ComplEx
+2024-01-28 21:56:25,359 INFO     Data Path: data/wn18rr
+2024-01-28 21:56:25,360 INFO     #entity: 40943
+2024-01-28 21:56:25,360 INFO     #relation: 11
+2024-01-28 21:56:25,552 INFO     #train: 86835
+2024-01-28 21:56:25,558 INFO     #valid: 3034
+2024-01-28 21:56:25,564 INFO     #test: 3134
+2024-01-28 21:56:25,575 INFO     C_test.txt#test: 0
+2024-01-28 21:56:25,583 INFO     Cc_test.txt#test: 172
+2024-01-28 21:56:25,599 INFO     S_test.txt#test: 1116
+2024-01-28 21:56:25,622 INFO     A_test.txt#test: 1790
+2024-01-28 21:56:25,623 INFO     AS_test.txt#test: 0
+2024-01-28 21:56:25,623 INFO     CS_test.txt#test: 0
+2024-01-28 21:56:25,645 INFO     Ss_test.txt#test: 1116
+2024-01-28 21:56:25,645 INFO     ACS_test.txt#test: 0
+2024-01-28 21:56:25,668 INFO     AC_test.txt#test: 172
+2024-01-28 21:56:25,712 INFO     Aa_test.txt#test: 1962
+2024-01-28 21:56:26,119 INFO     Model Parameter Configuration:
+2024-01-28 21:56:26,119 INFO     Parameter gamma: torch.Size([1]), require_grad = False
+2024-01-28 21:56:26,119 INFO     Parameter embedding_range: torch.Size([1]), require_grad = False
+2024-01-28 21:56:26,119 INFO     Parameter entity_embedding: torch.Size([40943, 1000]), require_grad = True
+2024-01-28 21:56:26,119 INFO     Parameter relation_embedding: torch.Size([11, 1000]), require_grad = True
+2024-01-28 21:56:30,201 INFO     Loading checkpoint models/ComplEx_wn18rr_CoWR...
+2024-01-28 21:56:32,907 INFO     Start Training...
+2024-01-28 21:56:32,907 INFO     init_step = 79999
+2024-01-28 21:56:32,907 INFO     batch_size = 1024
+2024-01-28 21:56:32,907 INFO     negative_adversarial_sampling = 0
+2024-01-28 21:56:32,907 INFO     hidden_dim = 500
+2024-01-28 21:56:32,907 INFO     gamma = 12.000000
+2024-01-28 21:56:32,907 INFO     negative_sample_size = 128
+2024-01-28 21:56:32,907 INFO     negative_adversarial_sampling = False
+2024-01-28 21:56:32,907 INFO     learning_rate = 0.000200
+2024-01-28 21:56:34,388 INFO     Evaluating on Valid Dataset...
+2024-01-28 21:56:35,245 INFO     Evaluating the model... (0/760)
+2024-01-28 21:57:29,943 INFO     Valid ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:57:29,944 INFO     Valid MRR at step 79999: 0.468150
+2024-01-28 21:57:29,944 INFO     Valid MR at step 79999: 5157.596407
+2024-01-28 21:57:29,944 INFO     Valid HITS@1 at step 79999: 0.428642
+2024-01-28 21:57:29,944 INFO     Valid HITS@3 at step 79999: 0.481872
+2024-01-28 21:57:29,944 INFO     Valid HITS@10 at step 79999: 0.549275
+2024-01-28 21:57:29,944 INFO     Evaluating on Test Dataset...
+2024-01-28 21:57:30,820 INFO     Evaluating the model... (0/784)
+2024-01-28 21:58:27,117 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,117 INFO     Test MRR at step 79999: 0.467607
+2024-01-28 21:58:27,117 INFO     Test MR at step 79999: 5436.068443
+2024-01-28 21:58:27,117 INFO     Test HITS@1 at step 79999: 0.425175
+2024-01-28 21:58:27,118 INFO     Test HITS@3 at step 79999: 0.485163
+2024-01-28 21:58:27,118 INFO     Test HITS@10 at step 79999: 0.553446
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:58:27,118 INFO     _member_of_domain_usage: 
+2024-01-28 21:58:27,118 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,118 INFO     Test MRR at step 79999: 0.195308
+2024-01-28 21:58:27,118 INFO     Test MR at step 79999: 16264.083333
+2024-01-28 21:58:27,118 INFO     Test HITS@1 at step 79999: 0.187500
+2024-01-28 21:58:27,118 INFO     Test HITS@3 at step 79999: 0.187500
+2024-01-28 21:58:27,118 INFO     Test HITS@10 at step 79999: 0.208333
+2024-01-28 21:58:27,118 INFO     _verb_group: 
+2024-01-28 21:58:27,118 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,118 INFO     Test MRR at step 79999: 0.942316
+2024-01-28 21:58:27,118 INFO     Test MR at step 79999: 153.243590
+2024-01-28 21:58:27,118 INFO     Test HITS@1 at step 79999: 0.910256
+2024-01-28 21:58:27,118 INFO     Test HITS@3 at step 79999: 0.974359
+2024-01-28 21:58:27,119 INFO     Test HITS@10 at step 79999: 0.974359
+2024-01-28 21:58:27,119 INFO     _member_of_domain_region: 
+2024-01-28 21:58:27,119 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,119 INFO     Test MRR at step 79999: 0.146470
+2024-01-28 21:58:27,119 INFO     Test MR at step 79999: 16290.596154
+2024-01-28 21:58:27,119 INFO     Test HITS@1 at step 79999: 0.115385
+2024-01-28 21:58:27,119 INFO     Test HITS@3 at step 79999: 0.153846
+2024-01-28 21:58:27,119 INFO     Test HITS@10 at step 79999: 0.230769
+2024-01-28 21:58:27,119 INFO     _member_meronym: 
+2024-01-28 21:58:27,119 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,119 INFO     Test MRR at step 79999: 0.238499
+2024-01-28 21:58:27,119 INFO     Test MR at step 79999: 1907.245059
+2024-01-28 21:58:27,119 INFO     Test HITS@1 at step 79999: 0.154150
+2024-01-28 21:58:27,119 INFO     Test HITS@3 at step 79999: 0.258893
+2024-01-28 21:58:27,119 INFO     Test HITS@10 at step 79999: 0.411067
+2024-01-28 21:58:27,119 INFO     _hypernym: 
+2024-01-28 21:58:27,120 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,120 INFO     Test MRR at step 79999: 0.141918
+2024-01-28 21:58:27,120 INFO     Test MR at step 79999: 10124.382494
+2024-01-28 21:58:27,120 INFO     Test HITS@1 at step 79999: 0.084732
+2024-01-28 21:58:27,120 INFO     Test HITS@3 at step 79999: 0.161871
+2024-01-28 21:58:27,120 INFO     Test HITS@10 at step 79999: 0.262190
+2024-01-28 21:58:27,120 INFO     _has_part: 
+2024-01-28 21:58:27,120 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,120 INFO     Test MRR at step 79999: 0.217362
+2024-01-28 21:58:27,120 INFO     Test MR at step 79999: 5261.912791
+2024-01-28 21:58:27,120 INFO     Test HITS@1 at step 79999: 0.162791
+2024-01-28 21:58:27,120 INFO     Test HITS@3 at step 79999: 0.235465
+2024-01-28 21:58:27,120 INFO     Test HITS@10 at step 79999: 0.337209
+2024-01-28 21:58:27,120 INFO     _derivationally_related_form: 
+2024-01-28 21:58:27,120 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,120 INFO     Test MRR at step 79999: 0.960120
+2024-01-28 21:58:27,121 INFO     Test MR at step 79999: 340.194600
+2024-01-28 21:58:27,121 INFO     Test HITS@1 at step 79999: 0.953445
+2024-01-28 21:58:27,121 INFO     Test HITS@3 at step 79999: 0.966015
+2024-01-28 21:58:27,121 INFO     Test HITS@10 at step 79999: 0.972533
+2024-01-28 21:58:27,121 INFO     _also_see: 
+2024-01-28 21:58:27,121 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,121 INFO     Test MRR at step 79999: 0.567107
+2024-01-28 21:58:27,121 INFO     Test MR at step 79999: 4702.517857
+2024-01-28 21:58:27,121 INFO     Test HITS@1 at step 79999: 0.491071
+2024-01-28 21:58:27,121 INFO     Test HITS@3 at step 79999: 0.607143
+2024-01-28 21:58:27,121 INFO     Test HITS@10 at step 79999: 0.696429
+2024-01-28 21:58:27,121 INFO     _instance_hypernym: 
+2024-01-28 21:58:27,121 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,121 INFO     Test MRR at step 79999: 0.349512
+2024-01-28 21:58:27,121 INFO     Test MR at step 79999: 4489.963115
+2024-01-28 21:58:27,121 INFO     Test HITS@1 at step 79999: 0.250000
+2024-01-28 21:58:27,121 INFO     Test HITS@3 at step 79999: 0.426230
+2024-01-28 21:58:27,122 INFO     Test HITS@10 at step 79999: 0.516393
+2024-01-28 21:58:27,122 INFO     _synset_domain_topic_of: 
+2024-01-28 21:58:27,122 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,122 INFO     Test MRR at step 79999: 0.319313
+2024-01-28 21:58:27,122 INFO     Test MR at step 79999: 8658.732456
+2024-01-28 21:58:27,122 INFO     Test HITS@1 at step 79999: 0.276316
+2024-01-28 21:58:27,122 INFO     Test HITS@3 at step 79999: 0.342105
+2024-01-28 21:58:27,122 INFO     Test HITS@10 at step 79999: 0.403509
+2024-01-28 21:58:27,122 INFO     _similar_to: 
+2024-01-28 21:58:27,122 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:27,122 INFO     Test MRR at step 79999: 1.000000
+2024-01-28 21:58:27,122 INFO     Test MR at step 79999: 1.000000
+2024-01-28 21:58:27,122 INFO     Test HITS@1 at step 79999: 1.000000
+2024-01-28 21:58:27,122 INFO     Test HITS@3 at step 79999: 1.000000
+2024-01-28 21:58:27,122 INFO     Test HITS@10 at step 79999: 1.000000
+2024-01-28 21:58:27,122 INFO     Evaluating on sub_Test Dataset...
+2024-01-28 21:58:27,975 INFO     Evaluating the model... (0/44)
+2024-01-28 21:58:31,477 INFO     Cc_test.txt
+2024-01-28 21:58:31,478 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:31,478 INFO     Test MRR at step 79999: 0.217362
+2024-01-28 21:58:31,478 INFO     Test MR at step 79999: 5261.912791
+2024-01-28 21:58:31,478 INFO     Test HITS@1 at step 79999: 0.162791
+2024-01-28 21:58:31,478 INFO     Test HITS@3 at step 79999: 0.235465
+2024-01-28 21:58:31,478 INFO     Test HITS@10 at step 79999: 0.337209
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:58:31,478 INFO     _has_part: 
+2024-01-28 21:58:31,478 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:31,478 INFO     Test MRR at step 79999: 0.217362
+2024-01-28 21:58:31,478 INFO     Test MR at step 79999: 5261.912791
+2024-01-28 21:58:31,478 INFO     Test HITS@1 at step 79999: 0.162791
+2024-01-28 21:58:31,478 INFO     Test HITS@3 at step 79999: 0.235465
+2024-01-28 21:58:31,478 INFO     Test HITS@10 at step 79999: 0.337209
+2024-01-28 21:58:32,383 INFO     Evaluating the model... (0/280)
+2024-01-28 21:58:52,734 INFO     S_test.txt
+2024-01-28 21:58:52,734 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:52,734 INFO     Test MRR at step 79999: 0.959605
+2024-01-28 21:58:52,734 INFO     Test MR at step 79999: 332.749552
+2024-01-28 21:58:52,734 INFO     Test HITS@1 at step 79999: 0.952061
+2024-01-28 21:58:52,734 INFO     Test HITS@3 at step 79999: 0.966398
+2024-01-28 21:58:52,734 INFO     Test HITS@10 at step 79999: 0.972670
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:58:52,735 INFO     _verb_group: 
+2024-01-28 21:58:52,735 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:52,735 INFO     Test MRR at step 79999: 0.942316
+2024-01-28 21:58:52,735 INFO     Test MR at step 79999: 153.243590
+2024-01-28 21:58:52,735 INFO     Test HITS@1 at step 79999: 0.910256
+2024-01-28 21:58:52,735 INFO     Test HITS@3 at step 79999: 0.974359
+2024-01-28 21:58:52,735 INFO     Test HITS@10 at step 79999: 0.974359
+2024-01-28 21:58:52,735 INFO     _derivationally_related_form: 
+2024-01-28 21:58:52,735 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:52,735 INFO     Test MRR at step 79999: 0.960120
+2024-01-28 21:58:52,735 INFO     Test MR at step 79999: 340.194600
+2024-01-28 21:58:52,735 INFO     Test HITS@1 at step 79999: 0.953445
+2024-01-28 21:58:52,735 INFO     Test HITS@3 at step 79999: 0.966015
+2024-01-28 21:58:52,735 INFO     Test HITS@10 at step 79999: 0.972533
+2024-01-28 21:58:52,735 INFO     _similar_to: 
+2024-01-28 21:58:52,735 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:58:52,735 INFO     Test MRR at step 79999: 1.000000
+2024-01-28 21:58:52,736 INFO     Test MR at step 79999: 1.000000
+2024-01-28 21:58:52,736 INFO     Test HITS@1 at step 79999: 1.000000
+2024-01-28 21:58:52,736 INFO     Test HITS@3 at step 79999: 1.000000
+2024-01-28 21:58:52,736 INFO     Test HITS@10 at step 79999: 1.000000
+2024-01-28 21:58:53,618 INFO     Evaluating the model... (0/448)
+2024-01-28 21:59:25,350 INFO     A_test.txt
+2024-01-28 21:59:25,351 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:25,351 INFO     Test MRR at step 79999: 0.181798
+2024-01-28 21:59:25,351 INFO     Test MR at step 79999: 8657.486034
+2024-01-28 21:59:25,351 INFO     Test HITS@1 at step 79999: 0.119832
+2024-01-28 21:59:25,351 INFO     Test HITS@3 at step 79999: 0.205307
+2024-01-28 21:59:25,351 INFO     Test HITS@10 at step 79999: 0.308380
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:59:25,351 INFO     _member_of_domain_usage: 
+2024-01-28 21:59:25,351 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:25,351 INFO     Test MRR at step 79999: 0.195308
+2024-01-28 21:59:25,351 INFO     Test MR at step 79999: 16264.083333
+2024-01-28 21:59:25,351 INFO     Test HITS@1 at step 79999: 0.187500
+2024-01-28 21:59:25,351 INFO     Test HITS@3 at step 79999: 0.187500
+2024-01-28 21:59:25,351 INFO     Test HITS@10 at step 79999: 0.208333
+2024-01-28 21:59:25,351 INFO     _member_of_domain_region: 
+2024-01-28 21:59:25,351 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:25,352 INFO     Test MRR at step 79999: 0.146470
+2024-01-28 21:59:25,352 INFO     Test MR at step 79999: 16290.596154
+2024-01-28 21:59:25,352 INFO     Test HITS@1 at step 79999: 0.115385
+2024-01-28 21:59:25,352 INFO     Test HITS@3 at step 79999: 0.153846
+2024-01-28 21:59:25,352 INFO     Test HITS@10 at step 79999: 0.230769
+2024-01-28 21:59:25,352 INFO     _member_meronym: 
+2024-01-28 21:59:25,352 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:25,352 INFO     Test MRR at step 79999: 0.238499
+2024-01-28 21:59:25,352 INFO     Test MR at step 79999: 1907.245059
+2024-01-28 21:59:25,352 INFO     Test HITS@1 at step 79999: 0.154150
+2024-01-28 21:59:25,352 INFO     Test HITS@3 at step 79999: 0.258893
+2024-01-28 21:59:25,352 INFO     Test HITS@10 at step 79999: 0.411067
+2024-01-28 21:59:25,352 INFO     _hypernym: 
+2024-01-28 21:59:25,352 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:25,352 INFO     Test MRR at step 79999: 0.141918
+2024-01-28 21:59:25,352 INFO     Test MR at step 79999: 10124.382494
+2024-01-28 21:59:25,353 INFO     Test HITS@1 at step 79999: 0.084732
+2024-01-28 21:59:25,353 INFO     Test HITS@3 at step 79999: 0.161871
+2024-01-28 21:59:25,353 INFO     Test HITS@10 at step 79999: 0.262190
+2024-01-28 21:59:25,353 INFO     _instance_hypernym: 
+2024-01-28 21:59:25,353 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:25,353 INFO     Test MRR at step 79999: 0.349512
+2024-01-28 21:59:25,353 INFO     Test MR at step 79999: 4489.963115
+2024-01-28 21:59:25,353 INFO     Test HITS@1 at step 79999: 0.250000
+2024-01-28 21:59:25,353 INFO     Test HITS@3 at step 79999: 0.426230
+2024-01-28 21:59:25,353 INFO     Test HITS@10 at step 79999: 0.516393
+2024-01-28 21:59:25,353 INFO     _synset_domain_topic_of: 
+2024-01-28 21:59:25,353 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:25,353 INFO     Test MRR at step 79999: 0.319313
+2024-01-28 21:59:25,353 INFO     Test MR at step 79999: 8658.732456
+2024-01-28 21:59:25,353 INFO     Test HITS@1 at step 79999: 0.276316
+2024-01-28 21:59:25,353 INFO     Test HITS@3 at step 79999: 0.342105
+2024-01-28 21:59:25,354 INFO     Test HITS@10 at step 79999: 0.403509
+2024-01-28 21:59:26,243 INFO     Evaluating the model... (0/280)
+2024-01-28 21:59:46,419 INFO     Ss_test.txt
+2024-01-28 21:59:46,419 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:46,419 INFO     Test MRR at step 79999: 0.959605
+2024-01-28 21:59:46,420 INFO     Test MR at step 79999: 332.749552
+2024-01-28 21:59:46,420 INFO     Test HITS@1 at step 79999: 0.952061
+2024-01-28 21:59:46,420 INFO     Test HITS@3 at step 79999: 0.966398
+2024-01-28 21:59:46,420 INFO     Test HITS@10 at step 79999: 0.972670
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:59:46,420 INFO     _verb_group: 
+2024-01-28 21:59:46,420 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:46,420 INFO     Test MRR at step 79999: 0.942316
+2024-01-28 21:59:46,420 INFO     Test MR at step 79999: 153.243590
+2024-01-28 21:59:46,420 INFO     Test HITS@1 at step 79999: 0.910256
+2024-01-28 21:59:46,420 INFO     Test HITS@3 at step 79999: 0.974359
+2024-01-28 21:59:46,420 INFO     Test HITS@10 at step 79999: 0.974359
+2024-01-28 21:59:46,421 INFO     _derivationally_related_form: 
+2024-01-28 21:59:46,421 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:46,421 INFO     Test MRR at step 79999: 0.960120
+2024-01-28 21:59:46,421 INFO     Test MR at step 79999: 340.194600
+2024-01-28 21:59:46,421 INFO     Test HITS@1 at step 79999: 0.953445
+2024-01-28 21:59:46,421 INFO     Test HITS@3 at step 79999: 0.966015
+2024-01-28 21:59:46,421 INFO     Test HITS@10 at step 79999: 0.972533
+2024-01-28 21:59:46,421 INFO     _similar_to: 
+2024-01-28 21:59:46,421 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:46,421 INFO     Test MRR at step 79999: 1.000000
+2024-01-28 21:59:46,421 INFO     Test MR at step 79999: 1.000000
+2024-01-28 21:59:46,421 INFO     Test HITS@1 at step 79999: 1.000000
+2024-01-28 21:59:46,422 INFO     Test HITS@3 at step 79999: 1.000000
+2024-01-28 21:59:46,422 INFO     Test HITS@10 at step 79999: 1.000000
+2024-01-28 21:59:47,274 INFO     Evaluating the model... (0/44)
+2024-01-28 21:59:50,807 INFO     AC_test.txt
+2024-01-28 21:59:50,807 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:50,807 INFO     Test MRR at step 79999: 0.217362
+2024-01-28 21:59:50,807 INFO     Test MR at step 79999: 5261.912791
+2024-01-28 21:59:50,807 INFO     Test HITS@1 at step 79999: 0.162791
+2024-01-28 21:59:50,807 INFO     Test HITS@3 at step 79999: 0.235465
+2024-01-28 21:59:50,807 INFO     Test HITS@10 at step 79999: 0.337209
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:59:50,807 INFO     _has_part: 
+2024-01-28 21:59:50,807 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 21:59:50,807 INFO     Test MRR at step 79999: 0.217362
+2024-01-28 21:59:50,808 INFO     Test MR at step 79999: 5261.912791
+2024-01-28 21:59:50,808 INFO     Test HITS@1 at step 79999: 0.162791
+2024-01-28 21:59:50,808 INFO     Test HITS@3 at step 79999: 0.235465
+2024-01-28 21:59:50,808 INFO     Test HITS@10 at step 79999: 0.337209
+2024-01-28 21:59:51,679 INFO     Evaluating the model... (0/492)
+2024-01-28 22:00:26,721 INFO     Aa_test.txt
+2024-01-28 22:00:26,721 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 22:00:26,721 INFO     Test MRR at step 79999: 0.184915
+2024-01-28 22:00:26,721 INFO     Test MR at step 79999: 8359.810907
+2024-01-28 22:00:26,721 INFO     Test HITS@1 at step 79999: 0.123598
+2024-01-28 22:00:26,721 INFO     Test HITS@3 at step 79999: 0.207951
+2024-01-28 22:00:26,722 INFO     Test HITS@10 at step 79999: 0.310907
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 22:00:26,722 INFO     _member_of_domain_usage: 
+2024-01-28 22:00:26,722 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 22:00:26,722 INFO     Test MRR at step 79999: 0.195308
+2024-01-28 22:00:26,722 INFO     Test MR at step 79999: 16264.083333
+2024-01-28 22:00:26,722 INFO     Test HITS@1 at step 79999: 0.187500
+2024-01-28 22:00:26,722 INFO     Test HITS@3 at step 79999: 0.187500
+2024-01-28 22:00:26,722 INFO     Test HITS@10 at step 79999: 0.208333
+2024-01-28 22:00:26,722 INFO     _member_of_domain_region: 
+2024-01-28 22:00:26,722 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 22:00:26,722 INFO     Test MRR at step 79999: 0.146470
+2024-01-28 22:00:26,722 INFO     Test MR at step 79999: 16290.596154
+2024-01-28 22:00:26,723 INFO     Test HITS@1 at step 79999: 0.115385
+2024-01-28 22:00:26,723 INFO     Test HITS@3 at step 79999: 0.153846
+2024-01-28 22:00:26,723 INFO     Test HITS@10 at step 79999: 0.230769
+2024-01-28 22:00:26,723 INFO     _member_meronym: 
+2024-01-28 22:00:26,723 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 22:00:26,723 INFO     Test MRR at step 79999: 0.238499
+2024-01-28 22:00:26,723 INFO     Test MR at step 79999: 1907.245059
+2024-01-28 22:00:26,723 INFO     Test HITS@1 at step 79999: 0.154150
+2024-01-28 22:00:26,723 INFO     Test HITS@3 at step 79999: 0.258893
+2024-01-28 22:00:26,723 INFO     Test HITS@10 at step 79999: 0.411067
+2024-01-28 22:00:26,723 INFO     _hypernym: 
+2024-01-28 22:00:26,723 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 22:00:26,724 INFO     Test MRR at step 79999: 0.141918
+2024-01-28 22:00:26,724 INFO     Test MR at step 79999: 10124.382494
+2024-01-28 22:00:26,724 INFO     Test HITS@1 at step 79999: 0.084732
+2024-01-28 22:00:26,724 INFO     Test HITS@3 at step 79999: 0.161871
+2024-01-28 22:00:26,724 INFO     Test HITS@10 at step 79999: 0.262190
+2024-01-28 22:00:26,724 INFO     _has_part: 
+2024-01-28 22:00:26,724 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 22:00:26,724 INFO     Test MRR at step 79999: 0.217362
+2024-01-28 22:00:26,724 INFO     Test MR at step 79999: 5261.912791
+2024-01-28 22:00:26,724 INFO     Test HITS@1 at step 79999: 0.162791
+2024-01-28 22:00:26,724 INFO     Test HITS@3 at step 79999: 0.235465
+2024-01-28 22:00:26,724 INFO     Test HITS@10 at step 79999: 0.337209
+2024-01-28 22:00:26,725 INFO     _instance_hypernym: 
+2024-01-28 22:00:26,725 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 22:00:26,725 INFO     Test MRR at step 79999: 0.349512
+2024-01-28 22:00:26,725 INFO     Test MR at step 79999: 4489.963115
+2024-01-28 22:00:26,725 INFO     Test HITS@1 at step 79999: 0.250000
+2024-01-28 22:00:26,725 INFO     Test HITS@3 at step 79999: 0.426230
+2024-01-28 22:00:26,725 INFO     Test HITS@10 at step 79999: 0.516393
+2024-01-28 22:00:26,725 INFO     _synset_domain_topic_of: 
+2024-01-28 22:00:26,725 INFO     Test ******* Model ComplEx ****  at step 79999: 1.000000
+2024-01-28 22:00:26,725 INFO     Test MRR at step 79999: 0.319313
+2024-01-28 22:00:26,725 INFO     Test MR at step 79999: 8658.732456
+2024-01-28 22:00:26,725 INFO     Test HITS@1 at step 79999: 0.276316
+2024-01-28 22:00:26,726 INFO     Test HITS@3 at step 79999: 0.342105
+2024-01-28 22:00:26,726 INFO     Test HITS@10 at step 79999: 0.403509

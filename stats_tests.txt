@@ -1,0 +1,68 @@
+<<<<<<<<<<     FB15k-237     >>>>>>>>>>>>>>>>>>>>
+----------     RotatE
+_____Butterfly
+Z-Test
+  head-mode: SAME probably distribution with p = 0.39918492253940596 and stat =0.843077819970608
+
+  tail-mode: DIFFERENT probably distribution with p = 1.5895713797336643e-47 and stat =14.481344511006514
+
+  both-mode: DIFFERENT probably distribution with p = 5.623584322664881e-08 and stat =5.430374727821479
+
+_____Butterfly_bias
+Z-Test
+  head-mode: DIFFERENT probably distribution with p = 6.1352020641567735e-19 and stat =8.889558819842405
+
+  tail-mode: DIFFERENT probably distribution with p = 1.9509237670409566e-51 and stat =15.087711497068153
+
+  both-mode: DIFFERENT probably distribution with p = 1.7006182109958138e-40 and stat =13.323030428725056
+
+_____EllipsE
+Z-Test
+  head-mode: SAME probably distribution with p = 0.4662837092228529 and stat =-0.7285389914221744
+
+  tail-mode: DIFFERENT probably distribution with p = 1.8731426182082298e-14 and stat =7.6590494557433955
+
+  both-mode: SAME probably distribution with p = 0.066907561296662 and stat =1.8322944650093616
+
+_____EllipsE_Var
+Z-Test
+  head-mode: SAME probably distribution with p = 0.7216692919258115 and stat =0.35622871126024414
+
+  tail-mode: DIFFERENT probably distribution with p = 4.968725434744472e-14 and stat =7.532737980377811
+
+  both-mode: DIFFERENT probably distribution with p = 0.012382929097978309 and stat =2.5010397154509385
+
+<<<<<<<<<<     wn18rr     >>>>>>>>>>>>>>>>>>>>
+----------     RotatE
+_____Butterfly
+Z-Test
+  head-mode: DIFFERENT probably distribution with p = 1.672348632305625e-06 and stat =4.789455037988965
+
+  tail-mode: DIFFERENT probably distribution with p = 1.4057774827333278e-12 and stat =7.083480927786943
+
+  both-mode: DIFFERENT probably distribution with p = 1.624537868435863e-07 and stat =5.237854802434241
+
+_____Butterfly_bias
+Z-Test
+  head-mode: DIFFERENT probably distribution with p = 4.385884953801474e-19 and stat =8.926779990703022
+
+  tail-mode: DIFFERENT probably distribution with p = 2.5649874360740257e-20 and stat =9.235743346935777
+
+  both-mode: DIFFERENT probably distribution with p = 3.809364515766709e-20 and stat =9.193309664102044
+
+_____EllipsE
+Z-Test
+  head-mode: DIFFERENT probably distribution with p = 0.0033656844315127143 and stat =2.9322013643560725
+
+  tail-mode: DIFFERENT probably distribution with p = 5.251877086960415e-06 and stat =4.554466188238088
+
+  both-mode: DIFFERENT probably distribution with p = 0.0018774154405552992 and stat =3.108968797635749
+
+_____EllipsE_Var
+Z-Test
+  head-mode: DIFFERENT probably distribution with p = 0.0006371321867392468 and stat =3.415293928236168
+
+  tail-mode: DIFFERENT probably distribution with p = 6.420397377360596e-09 and stat =5.8054223001836665
+
+  both-mode: DIFFERENT probably distribution with p = 0.0001143690097846981 and stat =3.8578923223424666
+

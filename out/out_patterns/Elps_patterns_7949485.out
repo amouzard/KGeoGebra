@@ -1,0 +1,345 @@
+1.10.2
+Start Evaluation on Test Data Set......
+2024-01-28 21:03:59,609 INFO     Model: EllipsE_Var
+2024-01-28 21:03:59,609 INFO     Data Path: data/wn18rr
+2024-01-28 21:03:59,609 INFO     #entity: 40943
+2024-01-28 21:03:59,609 INFO     #relation: 11
+2024-01-28 21:03:59,805 INFO     #train: 86835
+2024-01-28 21:03:59,811 INFO     #valid: 3034
+2024-01-28 21:03:59,817 INFO     #test: 3134
+2024-01-28 21:03:59,818 INFO     C_test.txt#test: 0
+2024-01-28 21:03:59,818 INFO     Cc_test.txt#test: 172
+2024-01-28 21:03:59,821 INFO     S_test.txt#test: 1116
+2024-01-28 21:03:59,825 INFO     A_test.txt#test: 1790
+2024-01-28 21:03:59,825 INFO     AS_test.txt#test: 0
+2024-01-28 21:03:59,826 INFO     CS_test.txt#test: 0
+2024-01-28 21:03:59,828 INFO     Ss_test.txt#test: 1116
+2024-01-28 21:03:59,829 INFO     ACS_test.txt#test: 0
+2024-01-28 21:03:59,829 INFO     AC_test.txt#test: 172
+2024-01-28 21:03:59,834 INFO     Aa_test.txt#test: 1962
+2024-01-28 21:04:00,464 INFO     Model Parameter Configuration:
+2024-01-28 21:04:00,464 INFO     Parameter gamma: torch.Size([1]), require_grad = False
+2024-01-28 21:04:00,464 INFO     Parameter embedding_range: torch.Size([1]), require_grad = False
+2024-01-28 21:04:00,464 INFO     Parameter entity_embedding: torch.Size([40943, 1600]), require_grad = True
+2024-01-28 21:04:00,464 INFO     Parameter relation_embedding: torch.Size([11, 2400]), require_grad = True
+2024-01-28 21:04:00,464 INFO     Parameter ellipse: torch.Size([1600]), require_grad = True
+2024-01-28 21:04:04,566 INFO     Loading checkpoint models/EllipsE_Var_wn18rr_ElVWR2...
+2024-01-28 21:04:04,943 INFO     Start Training...
+2024-01-28 21:04:04,943 INFO     init_step = 149999
+2024-01-28 21:04:04,943 INFO     batch_size = 1024
+2024-01-28 21:04:04,943 INFO     negative_adversarial_sampling = 0
+2024-01-28 21:04:04,944 INFO     hidden_dim = 800
+2024-01-28 21:04:04,944 INFO     gamma = 12.000000
+2024-01-28 21:04:04,944 INFO     negative_sample_size = 128
+2024-01-28 21:04:04,944 INFO     negative_adversarial_sampling = False
+2024-01-28 21:04:04,944 INFO     learning_rate = 0.000005
+2024-01-28 21:04:07,418 INFO     Evaluating on Valid Dataset...
+2024-01-28 21:04:08,925 INFO     Evaluating the model... (0/380)
+2024-01-28 21:05:16,929 INFO     Valid ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:05:16,929 INFO     Valid MRR at step 149999: 0.481071
+2024-01-28 21:05:16,929 INFO     Valid MR at step 149999: 4074.130026
+2024-01-28 21:05:16,929 INFO     Valid HITS@1 at step 149999: 0.436552
+2024-01-28 21:05:16,929 INFO     Valid HITS@3 at step 149999: 0.497363
+2024-01-28 21:05:16,929 INFO     Valid HITS@10 at step 149999: 0.566744
+2024-01-28 21:05:16,929 INFO     Evaluating on Test Dataset...
+2024-01-28 21:05:18,180 INFO     Evaluating the model... (0/392)
+2024-01-28 21:06:28,355 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,355 INFO     Test MRR at step 149999: 0.480954
+2024-01-28 21:06:28,355 INFO     Test MR at step 149999: 4121.064454
+2024-01-28 21:06:28,355 INFO     Test HITS@1 at step 149999: 0.435865
+2024-01-28 21:06:28,355 INFO     Test HITS@3 at step 149999: 0.498883
+2024-01-28 21:06:28,355 INFO     Test HITS@10 at step 149999: 0.566847
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:06:28,355 INFO     _member_of_domain_usage: 
+2024-01-28 21:06:28,356 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,356 INFO     Test MRR at step 149999: 0.277251
+2024-01-28 21:06:28,356 INFO     Test MR at step 149999: 11100.812500
+2024-01-28 21:06:28,356 INFO     Test HITS@1 at step 149999: 0.250000
+2024-01-28 21:06:28,356 INFO     Test HITS@3 at step 149999: 0.312500
+2024-01-28 21:06:28,356 INFO     Test HITS@10 at step 149999: 0.312500
+2024-01-28 21:06:28,356 INFO     _verb_group: 
+2024-01-28 21:06:28,356 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,356 INFO     Test MRR at step 149999: 0.897792
+2024-01-28 21:06:28,356 INFO     Test MR at step 149999: 381.410256
+2024-01-28 21:06:28,356 INFO     Test HITS@1 at step 149999: 0.820513
+2024-01-28 21:06:28,356 INFO     Test HITS@3 at step 149999: 0.974359
+2024-01-28 21:06:28,357 INFO     Test HITS@10 at step 149999: 0.974359
+2024-01-28 21:06:28,357 INFO     _member_of_domain_region: 
+2024-01-28 21:06:28,357 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,357 INFO     Test MRR at step 149999: 0.372677
+2024-01-28 21:06:28,357 INFO     Test MR at step 149999: 10793.942308
+2024-01-28 21:06:28,357 INFO     Test HITS@1 at step 149999: 0.346154
+2024-01-28 21:06:28,357 INFO     Test HITS@3 at step 149999: 0.346154
+2024-01-28 21:06:28,357 INFO     Test HITS@10 at step 149999: 0.461538
+2024-01-28 21:06:28,357 INFO     _member_meronym: 
+2024-01-28 21:06:28,357 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,357 INFO     Test MRR at step 149999: 0.226072
+2024-01-28 21:06:28,357 INFO     Test MR at step 149999: 3177.583004
+2024-01-28 21:06:28,358 INFO     Test HITS@1 at step 149999: 0.144269
+2024-01-28 21:06:28,358 INFO     Test HITS@3 at step 149999: 0.260870
+2024-01-28 21:06:28,358 INFO     Test HITS@10 at step 149999: 0.383399
+2024-01-28 21:06:28,358 INFO     _hypernym: 
+2024-01-28 21:06:28,358 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,358 INFO     Test MRR at step 149999: 0.172311
+2024-01-28 21:06:28,358 INFO     Test MR at step 149999: 7286.785372
+2024-01-28 21:06:28,358 INFO     Test HITS@1 at step 149999: 0.111511
+2024-01-28 21:06:28,358 INFO     Test HITS@3 at step 149999: 0.193845
+2024-01-28 21:06:28,358 INFO     Test HITS@10 at step 149999: 0.288569
+2024-01-28 21:06:28,358 INFO     _has_part: 
+2024-01-28 21:06:28,358 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,359 INFO     Test MRR at step 149999: 0.199543
+2024-01-28 21:06:28,359 INFO     Test MR at step 149999: 5208.340116
+2024-01-28 21:06:28,359 INFO     Test HITS@1 at step 149999: 0.133721
+2024-01-28 21:06:28,359 INFO     Test HITS@3 at step 149999: 0.206395
+2024-01-28 21:06:28,359 INFO     Test HITS@10 at step 149999: 0.357558
+2024-01-28 21:06:28,359 INFO     _derivationally_related_form: 
+2024-01-28 21:06:28,359 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,359 INFO     Test MRR at step 149999: 0.958302
+2024-01-28 21:06:28,359 INFO     Test MR at step 149999: 327.338920
+2024-01-28 21:06:28,359 INFO     Test HITS@1 at step 149999: 0.952048
+2024-01-28 21:06:28,359 INFO     Test HITS@3 at step 149999: 0.961825
+2024-01-28 21:06:28,359 INFO     Test HITS@10 at step 149999: 0.968343
+2024-01-28 21:06:28,360 INFO     _also_see: 
+2024-01-28 21:06:28,360 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,360 INFO     Test MRR at step 149999: 0.630252
+2024-01-28 21:06:28,360 INFO     Test MR at step 149999: 1333.883929
+2024-01-28 21:06:28,360 INFO     Test HITS@1 at step 149999: 0.580357
+2024-01-28 21:06:28,360 INFO     Test HITS@3 at step 149999: 0.660714
+2024-01-28 21:06:28,360 INFO     Test HITS@10 at step 149999: 0.705357
+2024-01-28 21:06:28,360 INFO     _instance_hypernym: 
+2024-01-28 21:06:28,360 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,360 INFO     Test MRR at step 149999: 0.311573
+2024-01-28 21:06:28,360 INFO     Test MR at step 149999: 2349.028689
+2024-01-28 21:06:28,360 INFO     Test HITS@1 at step 149999: 0.200820
+2024-01-28 21:06:28,361 INFO     Test HITS@3 at step 149999: 0.372951
+2024-01-28 21:06:28,361 INFO     Test HITS@10 at step 149999: 0.512295
+2024-01-28 21:06:28,361 INFO     _synset_domain_topic_of: 
+2024-01-28 21:06:28,361 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,361 INFO     Test MRR at step 149999: 0.380295
+2024-01-28 21:06:28,361 INFO     Test MR at step 149999: 7237.750000
+2024-01-28 21:06:28,361 INFO     Test HITS@1 at step 149999: 0.328947
+2024-01-28 21:06:28,361 INFO     Test HITS@3 at step 149999: 0.407895
+2024-01-28 21:06:28,361 INFO     Test HITS@10 at step 149999: 0.478070
+2024-01-28 21:06:28,361 INFO     _similar_to: 
+2024-01-28 21:06:28,361 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:28,361 INFO     Test MRR at step 149999: 1.000000
+2024-01-28 21:06:28,362 INFO     Test MR at step 149999: 1.000000
+2024-01-28 21:06:28,362 INFO     Test HITS@1 at step 149999: 1.000000
+2024-01-28 21:06:28,362 INFO     Test HITS@3 at step 149999: 1.000000
+2024-01-28 21:06:28,362 INFO     Test HITS@10 at step 149999: 1.000000
+2024-01-28 21:06:28,362 INFO     Evaluating on sub_Test Dataset...
+2024-01-28 21:06:29,697 INFO     Evaluating the model... (0/22)
+2024-01-28 21:06:34,288 INFO     Cc_test.txt
+2024-01-28 21:06:34,288 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:34,288 INFO     Test MRR at step 149999: 0.199543
+2024-01-28 21:06:34,288 INFO     Test MR at step 149999: 5208.340116
+2024-01-28 21:06:34,288 INFO     Test HITS@1 at step 149999: 0.133721
+2024-01-28 21:06:34,288 INFO     Test HITS@3 at step 149999: 0.206395
+2024-01-28 21:06:34,288 INFO     Test HITS@10 at step 149999: 0.357558
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:06:34,288 INFO     _has_part: 
+2024-01-28 21:06:34,288 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:06:34,289 INFO     Test MRR at step 149999: 0.199543
+2024-01-28 21:06:34,289 INFO     Test MR at step 149999: 5208.340116
+2024-01-28 21:06:34,289 INFO     Test HITS@1 at step 149999: 0.133721
+2024-01-28 21:06:34,289 INFO     Test HITS@3 at step 149999: 0.206395
+2024-01-28 21:06:34,289 INFO     Test HITS@10 at step 149999: 0.357558
+2024-01-28 21:06:35,766 INFO     Evaluating the model... (0/140)
+2024-01-28 21:07:01,067 INFO     S_test.txt
+2024-01-28 21:07:01,067 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:01,067 INFO     Test MRR at step 149999: 0.956299
+2024-01-28 21:07:01,067 INFO     Test MR at step 149999: 328.351254
+2024-01-28 21:07:01,067 INFO     Test HITS@1 at step 149999: 0.947581
+2024-01-28 21:07:01,067 INFO     Test HITS@3 at step 149999: 0.962366
+2024-01-28 21:07:01,068 INFO     Test HITS@10 at step 149999: 0.968638
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:07:01,068 INFO     _verb_group: 
+2024-01-28 21:07:01,068 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:01,068 INFO     Test MRR at step 149999: 0.897792
+2024-01-28 21:07:01,068 INFO     Test MR at step 149999: 381.410256
+2024-01-28 21:07:01,068 INFO     Test HITS@1 at step 149999: 0.820513
+2024-01-28 21:07:01,068 INFO     Test HITS@3 at step 149999: 0.974359
+2024-01-28 21:07:01,068 INFO     Test HITS@10 at step 149999: 0.974359
+2024-01-28 21:07:01,068 INFO     _derivationally_related_form: 
+2024-01-28 21:07:01,068 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:01,068 INFO     Test MRR at step 149999: 0.958302
+2024-01-28 21:07:01,069 INFO     Test MR at step 149999: 327.338920
+2024-01-28 21:07:01,069 INFO     Test HITS@1 at step 149999: 0.952048
+2024-01-28 21:07:01,069 INFO     Test HITS@3 at step 149999: 0.961825
+2024-01-28 21:07:01,069 INFO     Test HITS@10 at step 149999: 0.968343
+2024-01-28 21:07:01,069 INFO     _similar_to: 
+2024-01-28 21:07:01,069 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:01,069 INFO     Test MRR at step 149999: 1.000000
+2024-01-28 21:07:01,069 INFO     Test MR at step 149999: 1.000000
+2024-01-28 21:07:01,069 INFO     Test HITS@1 at step 149999: 1.000000
+2024-01-28 21:07:01,069 INFO     Test HITS@3 at step 149999: 1.000000
+2024-01-28 21:07:01,069 INFO     Test HITS@10 at step 149999: 1.000000
+2024-01-28 21:07:02,270 INFO     Evaluating the model... (0/224)
+2024-01-28 21:07:42,188 INFO     A_test.txt
+2024-01-28 21:07:42,188 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:42,188 INFO     Test MRR at step 149999: 0.206964
+2024-01-28 21:07:42,188 INFO     Test MR at step 149999: 6468.404469
+2024-01-28 21:07:42,188 INFO     Test HITS@1 at step 149999: 0.141341
+2024-01-28 21:07:42,188 INFO     Test HITS@3 at step 149999: 0.232961
+2024-01-28 21:07:42,188 INFO     Test HITS@10 at step 149999: 0.332123
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:07:42,188 INFO     _member_of_domain_usage: 
+2024-01-28 21:07:42,189 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:42,189 INFO     Test MRR at step 149999: 0.277251
+2024-01-28 21:07:42,189 INFO     Test MR at step 149999: 11100.812500
+2024-01-28 21:07:42,189 INFO     Test HITS@1 at step 149999: 0.250000
+2024-01-28 21:07:42,189 INFO     Test HITS@3 at step 149999: 0.312500
+2024-01-28 21:07:42,189 INFO     Test HITS@10 at step 149999: 0.312500
+2024-01-28 21:07:42,189 INFO     _member_of_domain_region: 
+2024-01-28 21:07:42,189 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:42,189 INFO     Test MRR at step 149999: 0.372677
+2024-01-28 21:07:42,189 INFO     Test MR at step 149999: 10793.942308
+2024-01-28 21:07:42,189 INFO     Test HITS@1 at step 149999: 0.346154
+2024-01-28 21:07:42,189 INFO     Test HITS@3 at step 149999: 0.346154
+2024-01-28 21:07:42,189 INFO     Test HITS@10 at step 149999: 0.461538
+2024-01-28 21:07:42,190 INFO     _member_meronym: 
+2024-01-28 21:07:42,190 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:42,190 INFO     Test MRR at step 149999: 0.226072
+2024-01-28 21:07:42,190 INFO     Test MR at step 149999: 3177.583004
+2024-01-28 21:07:42,190 INFO     Test HITS@1 at step 149999: 0.144269
+2024-01-28 21:07:42,190 INFO     Test HITS@3 at step 149999: 0.260870
+2024-01-28 21:07:42,190 INFO     Test HITS@10 at step 149999: 0.383399
+2024-01-28 21:07:42,190 INFO     _hypernym: 
+2024-01-28 21:07:42,190 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:42,190 INFO     Test MRR at step 149999: 0.172311
+2024-01-28 21:07:42,190 INFO     Test MR at step 149999: 7286.785372
+2024-01-28 21:07:42,190 INFO     Test HITS@1 at step 149999: 0.111511
+2024-01-28 21:07:42,190 INFO     Test HITS@3 at step 149999: 0.193845
+2024-01-28 21:07:42,190 INFO     Test HITS@10 at step 149999: 0.288569
+2024-01-28 21:07:42,190 INFO     _instance_hypernym: 
+2024-01-28 21:07:42,191 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:42,191 INFO     Test MRR at step 149999: 0.311573
+2024-01-28 21:07:42,191 INFO     Test MR at step 149999: 2349.028689
+2024-01-28 21:07:42,191 INFO     Test HITS@1 at step 149999: 0.200820
+2024-01-28 21:07:42,191 INFO     Test HITS@3 at step 149999: 0.372951
+2024-01-28 21:07:42,191 INFO     Test HITS@10 at step 149999: 0.512295
+2024-01-28 21:07:42,191 INFO     _synset_domain_topic_of: 
+2024-01-28 21:07:42,191 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:07:42,191 INFO     Test MRR at step 149999: 0.380295
+2024-01-28 21:07:42,191 INFO     Test MR at step 149999: 7237.750000
+2024-01-28 21:07:42,191 INFO     Test HITS@1 at step 149999: 0.328947
+2024-01-28 21:07:42,191 INFO     Test HITS@3 at step 149999: 0.407895
+2024-01-28 21:07:42,191 INFO     Test HITS@10 at step 149999: 0.478070
+2024-01-28 21:07:43,291 INFO     Evaluating the model... (0/140)
+2024-01-28 21:08:08,802 INFO     Ss_test.txt
+2024-01-28 21:08:08,803 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:08,803 INFO     Test MRR at step 149999: 0.956299
+2024-01-28 21:08:08,803 INFO     Test MR at step 149999: 328.351254
+2024-01-28 21:08:08,803 INFO     Test HITS@1 at step 149999: 0.947581
+2024-01-28 21:08:08,803 INFO     Test HITS@3 at step 149999: 0.962366
+2024-01-28 21:08:08,803 INFO     Test HITS@10 at step 149999: 0.968638
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:08:08,803 INFO     _verb_group: 
+2024-01-28 21:08:08,803 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:08,803 INFO     Test MRR at step 149999: 0.897792
+2024-01-28 21:08:08,803 INFO     Test MR at step 149999: 381.410256
+2024-01-28 21:08:08,803 INFO     Test HITS@1 at step 149999: 0.820513
+2024-01-28 21:08:08,803 INFO     Test HITS@3 at step 149999: 0.974359
+2024-01-28 21:08:08,803 INFO     Test HITS@10 at step 149999: 0.974359
+2024-01-28 21:08:08,803 INFO     _derivationally_related_form: 
+2024-01-28 21:08:08,803 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:08,804 INFO     Test MRR at step 149999: 0.958302
+2024-01-28 21:08:08,804 INFO     Test MR at step 149999: 327.338920
+2024-01-28 21:08:08,804 INFO     Test HITS@1 at step 149999: 0.952048
+2024-01-28 21:08:08,804 INFO     Test HITS@3 at step 149999: 0.961825
+2024-01-28 21:08:08,804 INFO     Test HITS@10 at step 149999: 0.968343
+2024-01-28 21:08:08,804 INFO     _similar_to: 
+2024-01-28 21:08:08,804 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:08,804 INFO     Test MRR at step 149999: 1.000000
+2024-01-28 21:08:08,804 INFO     Test MR at step 149999: 1.000000
+2024-01-28 21:08:08,804 INFO     Test HITS@1 at step 149999: 1.000000
+2024-01-28 21:08:08,804 INFO     Test HITS@3 at step 149999: 1.000000
+2024-01-28 21:08:08,804 INFO     Test HITS@10 at step 149999: 1.000000
+2024-01-28 21:08:10,234 INFO     Evaluating the model... (0/22)
+2024-01-28 21:08:14,762 INFO     AC_test.txt
+2024-01-28 21:08:14,763 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:14,763 INFO     Test MRR at step 149999: 0.199543
+2024-01-28 21:08:14,763 INFO     Test MR at step 149999: 5208.340116
+2024-01-28 21:08:14,763 INFO     Test HITS@1 at step 149999: 0.133721
+2024-01-28 21:08:14,763 INFO     Test HITS@3 at step 149999: 0.206395
+2024-01-28 21:08:14,763 INFO     Test HITS@10 at step 149999: 0.357558
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:08:14,763 INFO     _has_part: 
+2024-01-28 21:08:14,763 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:14,763 INFO     Test MRR at step 149999: 0.199543
+2024-01-28 21:08:14,763 INFO     Test MR at step 149999: 5208.340116
+2024-01-28 21:08:14,764 INFO     Test HITS@1 at step 149999: 0.133721
+2024-01-28 21:08:14,764 INFO     Test HITS@3 at step 149999: 0.206395
+2024-01-28 21:08:14,764 INFO     Test HITS@10 at step 149999: 0.357558
+2024-01-28 21:08:15,946 INFO     Evaluating the model... (0/246)
+2024-01-28 21:08:59,828 INFO     Aa_test.txt
+2024-01-28 21:08:59,828 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:59,829 INFO     Test MRR at step 149999: 0.206314
+2024-01-28 21:08:59,829 INFO     Test MR at step 149999: 6357.940112
+2024-01-28 21:08:59,829 INFO     Test HITS@1 at step 149999: 0.140673
+2024-01-28 21:08:59,829 INFO     Test HITS@3 at step 149999: 0.230632
+2024-01-28 21:08:59,829 INFO     Test HITS@10 at step 149999: 0.334353
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-28 21:08:59,829 INFO     _member_of_domain_usage: 
+2024-01-28 21:08:59,829 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:59,829 INFO     Test MRR at step 149999: 0.277251
+2024-01-28 21:08:59,829 INFO     Test MR at step 149999: 11100.812500
+2024-01-28 21:08:59,829 INFO     Test HITS@1 at step 149999: 0.250000
+2024-01-28 21:08:59,829 INFO     Test HITS@3 at step 149999: 0.312500
+2024-01-28 21:08:59,829 INFO     Test HITS@10 at step 149999: 0.312500
+2024-01-28 21:08:59,829 INFO     _member_of_domain_region: 
+2024-01-28 21:08:59,829 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:59,829 INFO     Test MRR at step 149999: 0.372677
+2024-01-28 21:08:59,830 INFO     Test MR at step 149999: 10793.942308
+2024-01-28 21:08:59,830 INFO     Test HITS@1 at step 149999: 0.346154
+2024-01-28 21:08:59,830 INFO     Test HITS@3 at step 149999: 0.346154
+2024-01-28 21:08:59,830 INFO     Test HITS@10 at step 149999: 0.461538
+2024-01-28 21:08:59,830 INFO     _member_meronym: 
+2024-01-28 21:08:59,830 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:59,830 INFO     Test MRR at step 149999: 0.226072
+2024-01-28 21:08:59,830 INFO     Test MR at step 149999: 3177.583004
+2024-01-28 21:08:59,830 INFO     Test HITS@1 at step 149999: 0.144269
+2024-01-28 21:08:59,830 INFO     Test HITS@3 at step 149999: 0.260870
+2024-01-28 21:08:59,830 INFO     Test HITS@10 at step 149999: 0.383399
+2024-01-28 21:08:59,830 INFO     _hypernym: 
+2024-01-28 21:08:59,830 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:59,830 INFO     Test MRR at step 149999: 0.172311
+2024-01-28 21:08:59,830 INFO     Test MR at step 149999: 7286.785372
+2024-01-28 21:08:59,830 INFO     Test HITS@1 at step 149999: 0.111511
+2024-01-28 21:08:59,831 INFO     Test HITS@3 at step 149999: 0.193845
+2024-01-28 21:08:59,831 INFO     Test HITS@10 at step 149999: 0.288569
+2024-01-28 21:08:59,831 INFO     _has_part: 
+2024-01-28 21:08:59,831 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:59,831 INFO     Test MRR at step 149999: 0.199543
+2024-01-28 21:08:59,831 INFO     Test MR at step 149999: 5208.340116
+2024-01-28 21:08:59,831 INFO     Test HITS@1 at step 149999: 0.133721
+2024-01-28 21:08:59,831 INFO     Test HITS@3 at step 149999: 0.206395
+2024-01-28 21:08:59,831 INFO     Test HITS@10 at step 149999: 0.357558
+2024-01-28 21:08:59,831 INFO     _instance_hypernym: 
+2024-01-28 21:08:59,831 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:59,831 INFO     Test MRR at step 149999: 0.311573
+2024-01-28 21:08:59,831 INFO     Test MR at step 149999: 2349.028689
+2024-01-28 21:08:59,831 INFO     Test HITS@1 at step 149999: 0.200820
+2024-01-28 21:08:59,831 INFO     Test HITS@3 at step 149999: 0.372951
+2024-01-28 21:08:59,832 INFO     Test HITS@10 at step 149999: 0.512295
+2024-01-28 21:08:59,832 INFO     _synset_domain_topic_of: 
+2024-01-28 21:08:59,832 INFO     Test ******* Model EllipsE_Var ****  at step 149999: 1.000000
+2024-01-28 21:08:59,832 INFO     Test MRR at step 149999: 0.380295
+2024-01-28 21:08:59,832 INFO     Test MR at step 149999: 7237.750000
+2024-01-28 21:08:59,832 INFO     Test HITS@1 at step 149999: 0.328947
+2024-01-28 21:08:59,832 INFO     Test HITS@3 at step 149999: 0.407895
+2024-01-28 21:08:59,832 INFO     Test HITS@10 at step 149999: 0.478070
