@@ -72,7 +72,7 @@ def parse_args(args=None):
     parser.add_argument('--nentity', type=int, default=0, help='DO NOT MANUALLY SET')
     parser.add_argument('--nrelation', type=int, default=0, help='DO NOT MANUALLY SET')
 
-    parser.add_argument('--save_ranks', action='store_true', default='False')
+    parser.add_argument('--save_ranks', default='False', action='store_true')
 
     return parser.parse_args(args)
 
@@ -404,17 +404,7 @@ def main(args):
                 logging.info('Evaluating on Test Dataset...')
                 metrics, metrics_rel = kge_model.test_step(kge_model, valid_triples, all_true_triples, args)
                 log_metrics('Test', step, metrics)
-                # log_metrics_rel('Test', step, metrics_rel, id2relation)
 
-            # if args.do_sub_test and step % args.valid_steps == 0:
-            #     logging.info('Evaluating on sub_Test Dataset...')
-            #     for key in sub_test.keys():
-            #         if len(sub_test[key]) == 0:
-            #             continue
-            #         metrics, metrics_rel = kge_model.test_step(kge_model, sub_test[key], all_true_triples, args)
-            #         logging.info(key)
-            #         log_metrics('Test', step, metrics)
-            #         log_metrics_rel('Test', step, metrics_rel, id2relation)
 
         save_variable_list = {
             'step': step,
@@ -449,7 +439,7 @@ def main(args):
         logging.info('Evaluating on Training Dataset...')
         metrics, metrics_rel = kge_model.test_step(kge_model, train_triples, all_true_triples, args)
         log_metrics('Test', step, metrics)
-        #log_metrics_rel('Test', step, metrics_rel, id2relation)
+
 if __name__ == '__main__':
 
     main(parse_args())

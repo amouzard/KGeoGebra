@@ -22,9 +22,6 @@ from dataloader import TestDataset
 from collections import defaultdict
 
 
-MIN_NORM = 1e-8
-
-
 class KGEModel_Geo(nn.Module):
     def __init__(self, model_name, nentity, nrelation, hidden_dim, gamma,
                  double_entity_embedding=False, double_relation_embedding=False):
@@ -182,7 +179,6 @@ class KGEModel_Geo(nn.Module):
 
         return score
     def TransE(self, head, relation, tail, mode):
-        # bash run.sh test TransE FB15k 0 TrFB 1024 256 1000 24.0 1.0 0.0001 150000 16
         if mode == 'head-batch':
             score = head + (relation - tail)
         else:
@@ -218,7 +214,6 @@ class KGEModel_Geo(nn.Module):
         return score
 
     def RotatE(self, head, relation, tail, mode):
-        # bash run.sh test RotatE FB15k-237 0 RotFB237 1024 256 1000 9.0 1.0 0.00005 100000 16 -de
         pi = 3.14159265358979323846
 
         re_head, im_head = torch.chunk(head, 2, dim=2)
@@ -249,7 +244,6 @@ class KGEModel_Geo(nn.Module):
         return score
 
     def EllipsE(self, head, rel, tail, mode):
-        # bash run.sh train EllipsE youtube 0 ElYT 1024 256 300 12. 1 0.0001 120000 16 -de
         MIN = 1e-10
         re_head, im_head = torch.chunk(head, 2, dim=2)
         re_tail, im_tail = torch.chunk(tail, 2, dim=2)
@@ -270,7 +264,6 @@ class KGEModel_Geo(nn.Module):
         return score
 
     def EllipsE_Var(self, head, rel1, tail, mode):
-        # bash runs.sh train EllipsE_Var HangedHats 0 0 514 100 32 1.0 .5 0.0001 120000 16
         MIN = 1e-10
         re_head, im_head = torch.chunk(head, 2, dim=2)
         re_tail, im_tail = torch.chunk(tail, 2, dim=2)
@@ -292,32 +285,8 @@ class KGEModel_Geo(nn.Module):
         score = self.gamma.item() - score.sum(dim=2)
         return score
 
-    def Butterfly_bias(self, head, rel, tail, mode):
-        # Embeds entities in standard complex space and relation on a butterfly. From the relation angle,
-        # the butterfly polar equation are used to find relation radius.
-        # Relations become standard complex numbers and multiply the heads.
-        MIN = 1e-10
-        re_head, im_head = torch.chunk(head, 2, dim=2)
-        re_tail, im_tail = torch.chunk(tail, 2, dim=2)
-        theta, bias = torch.chunk(rel, 2, dim=2)
-        bias = torch.abs(bias)
-        # Make phases of relations uniformly distributed in [-pi, pi]
-        theta = 12*self.pi + 12*theta/(self.embedding_range.item()/self.pi)
-        radius = torch.exp(torch.sin(theta)) - 2*torch.cos(4*theta) + torch.sin((2*theta - self.pi)/24.)**5
-
-        radius = radius * bias
-        re_relation = radius * torch.cos(theta)
-        im_relation = radius * torch.sin(theta)
-        re_score = (re_head * re_relation - im_head * im_relation) - re_tail
-        im_score = (re_head * im_relation + im_head * re_relation) - im_tail
-
-        score = torch.stack([re_score, im_score], dim=0)
-        score = score.norm(dim=0, p=2)
-        score = self.gamma.item() - score.sum(dim=2)
-        return score
-
     def Butterfly(self, head, rel, tail, mode):
-        # Embeds entities in standard complex space and relation on a butterfly. From the relation angle,
+        # Embeds entities in standard complex space and relation on butterflies. From the relation angle,
         # the butterfly polar equation are used to find relation radius.
         # Relations become standard complex numbers and multiply the heads.
         MIN = 1e-10
@@ -328,6 +297,28 @@ class KGEModel_Geo(nn.Module):
         theta = 12*self.pi + 12*theta/(self.embedding_range.item()/self.pi)
         radius = torch.exp(torch.sin(theta)) - 2*torch.cos(4*theta) + torch.sin((2*theta - self.pi)/24.)**5
 
+        re_relation = radius * torch.cos(theta)
+        im_relation = radius * torch.sin(theta)
+        re_score = (re_head * re_relation - im_head * im_relation) - re_tail
+        im_score = (re_head * im_relation + im_head * re_relation) - im_tail
+
+        score = torch.stack([re_score, im_score], dim=0)
+        score = score.norm(dim=0, p=2)
+        score = self.gamma.item() - score.sum(dim=2)
+        return score
+
+    def Butterfly_bias(self, head, rel, tail, mode):
+        # Embeds entities in standard complex space and relation on butterflies.
+        MIN = 1e-10
+        re_head, im_head = torch.chunk(head, 2, dim=2)
+        re_tail, im_tail = torch.chunk(tail, 2, dim=2)
+        theta, bias = torch.chunk(rel, 2, dim=2)
+        bias = torch.abs(bias)
+        # Make phases of relations uniformly distributed in [-pi, pi]
+        theta = 12*self.pi + 12*theta/(self.embedding_range.item()/self.pi)
+        radius = torch.exp(torch.sin(theta)) - 2*torch.cos(4*theta) + torch.sin((2*theta - self.pi)/24.)**5
+
+        radius = radius * bias
         re_relation = radius * torch.cos(theta)
         im_relation = radius * torch.sin(theta)
         re_score = (re_head * re_relation - im_head * im_relation) - re_tail
@@ -494,35 +485,15 @@ class KGEModel_Geo(nn.Module):
 
                         if mode == 'head-batch':
                             positive_arg = positive_sample[:, 0]
-                            #h, r, t = dt.t, dt.r, dt.h
                         elif mode == 'tail-batch':
                             positive_arg = positive_sample[:, 2]
-                            #h, r, t = dt.h, dt.r, dt.t
                         else:
                             raise ValueError('mode %s not supported' % mode)
-                        #Rel = positive_sample[:, 1]
 
 
                         for i in range(batch_size):
-                            # mask = h == positive_arg[i].item()
-                            # mask = (r == Rel[i].item()) & mask
-
                             ranking = (argsort[i, :] == positive_arg[i]).nonzero()
 
-                            #print(f' ranking {ranking.shape}')
-                            #ranking1 = (argsort1[i, :] == positive_arg[i]).nonzero()
-
-                            assert ranking.size(0) == 1
-
-                            # List = t[mask].values
-                            #
-                            # if len(List)>0:
-                            #     rank = []
-                            #     for v in List:
-                            #         try:
-                            #             rank.append(argsort[i,:].tolist().index(v))
-                            #         except:
-                            #             rank.append(-1)
                             rel = positive_sample[i][1].item()
 
                             # ranking + 1 is the true ranking used in evaluation metrics
@@ -534,7 +505,6 @@ class KGEModel_Geo(nn.Module):
                                 conds = (triple_frame.h == triple_ind[0]) & (triple_frame.r == triple_ind[1]) & (triple_frame.t == triple_ind[2])
                                 triple_frame.loc[:, mode][conds] = ranking
 
-                            # selectionElt_rank = torch.sqrt(torch.abs(model.selectionElt))
                             log = {
                                 '******* Model '+args.model+' **** ': 1,
                                 'MRR': 1.0 / ranking,

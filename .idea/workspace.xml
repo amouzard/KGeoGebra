@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="917fcefc-5c99-4639-ace5-da431c44f0f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/KGeoGebra.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RotatE-Master0.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codes/kgeogebra.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/kgeogebra.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codes/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237TransE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/triples_ranked_FB15k-237TransE.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrTransE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/triples_ranked_wn18rrTransE.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
