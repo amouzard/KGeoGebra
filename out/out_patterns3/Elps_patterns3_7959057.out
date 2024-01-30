@@ -1,0 +1,344 @@
+1.10.2
+Start Evaluation on Test Data Set......
+2024-01-30 01:38:45,615 INFO     Model: RotatE
+2024-01-30 01:38:45,615 INFO     Data Path: data/wn18rr
+2024-01-30 01:38:45,615 INFO     #entity: 40943
+2024-01-30 01:38:45,615 INFO     #relation: 11
+2024-01-30 01:38:45,820 INFO     #train: 86835
+2024-01-30 01:38:45,826 INFO     #valid: 3034
+2024-01-30 01:38:45,832 INFO     #test: 3134
+2024-01-30 01:38:45,833 INFO     C_test.txt#test: 0
+2024-01-30 01:38:45,833 INFO     Cc_test.txt#test: 172
+2024-01-30 01:38:45,836 INFO     S_test.txt#test: 1116
+2024-01-30 01:38:45,840 INFO     A_test.txt#test: 1790
+2024-01-30 01:38:45,840 INFO     AS_test.txt#test: 0
+2024-01-30 01:38:45,841 INFO     CS_test.txt#test: 0
+2024-01-30 01:38:45,843 INFO     Ss_test.txt#test: 1116
+2024-01-30 01:38:45,844 INFO     ACS_test.txt#test: 0
+2024-01-30 01:38:45,844 INFO     AC_test.txt#test: 172
+2024-01-30 01:38:45,849 INFO     Aa_test.txt#test: 1962
+2024-01-30 01:38:46,278 INFO     Model Parameter Configuration:
+2024-01-30 01:38:46,278 INFO     Parameter gamma: torch.Size([1]), require_grad = False
+2024-01-30 01:38:46,279 INFO     Parameter embedding_range: torch.Size([1]), require_grad = False
+2024-01-30 01:38:46,279 INFO     Parameter entity_embedding: torch.Size([40943, 1000]), require_grad = True
+2024-01-30 01:38:46,279 INFO     Parameter relation_embedding: torch.Size([11, 500]), require_grad = True
+2024-01-30 01:38:50,669 INFO     Loading checkpoint models/RotatE_wn18rr_RotWR2...
+2024-01-30 01:38:52,187 INFO     Start Training...
+2024-01-30 01:38:52,187 INFO     init_step = 79999
+2024-01-30 01:38:52,187 INFO     batch_size = 1024
+2024-01-30 01:38:52,187 INFO     negative_adversarial_sampling = 0
+2024-01-30 01:38:52,187 INFO     hidden_dim = 500
+2024-01-30 01:38:52,187 INFO     gamma = 12.000000
+2024-01-30 01:38:52,187 INFO     negative_sample_size = 128
+2024-01-30 01:38:52,187 INFO     negative_adversarial_sampling = False
+2024-01-30 01:38:52,187 INFO     learning_rate = 0.000005
+2024-01-30 01:38:53,767 INFO     Evaluating on Valid Dataset...
+2024-01-30 01:38:54,717 INFO     Evaluating the model... (0/760)
+2024-01-30 01:39:56,136 INFO     Valid ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:39:56,136 INFO     Valid MRR at step 79999: 0.478846
+2024-01-30 01:39:56,136 INFO     Valid MR at step 79999: 3255.286750
+2024-01-30 01:39:56,136 INFO     Valid HITS@1 at step 79999: 0.432927
+2024-01-30 01:39:56,136 INFO     Valid HITS@3 at step 79999: 0.494726
+2024-01-30 01:39:56,136 INFO     Valid HITS@10 at step 79999: 0.570369
+2024-01-30 01:39:56,137 INFO     Evaluating on Test Dataset...
+2024-01-30 01:39:57,065 INFO     Evaluating the model... (0/784)
+2024-01-30 01:40:59,150 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,150 INFO     Test MRR at step 79999: 0.475327
+2024-01-30 01:40:59,151 INFO     Test MR at step 79999: 3323.679643
+2024-01-30 01:40:59,151 INFO     Test HITS@1 at step 79999: 0.426292
+2024-01-30 01:40:59,151 INFO     Test HITS@3 at step 79999: 0.495214
+2024-01-30 01:40:59,151 INFO     Test HITS@10 at step 79999: 0.574027
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:40:59,151 INFO     _member_of_domain_usage: 
+2024-01-30 01:40:59,151 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,151 INFO     Test MRR at step 79999: 0.293969
+2024-01-30 01:40:59,152 INFO     Test MR at step 79999: 5062.104167
+2024-01-30 01:40:59,152 INFO     Test HITS@1 at step 79999: 0.270833
+2024-01-30 01:40:59,152 INFO     Test HITS@3 at step 79999: 0.270833
+2024-01-30 01:40:59,152 INFO     Test HITS@10 at step 79999: 0.354167
+2024-01-30 01:40:59,152 INFO     _verb_group: 
+2024-01-30 01:40:59,152 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,152 INFO     Test MRR at step 79999: 0.968298
+2024-01-30 01:40:59,152 INFO     Test MR at step 79999: 67.320513
+2024-01-30 01:40:59,152 INFO     Test HITS@1 at step 79999: 0.961538
+2024-01-30 01:40:59,152 INFO     Test HITS@3 at step 79999: 0.974359
+2024-01-30 01:40:59,153 INFO     Test HITS@10 at step 79999: 0.974359
+2024-01-30 01:40:59,153 INFO     _member_of_domain_region: 
+2024-01-30 01:40:59,153 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,153 INFO     Test MRR at step 79999: 0.232062
+2024-01-30 01:40:59,153 INFO     Test MR at step 79999: 6607.423077
+2024-01-30 01:40:59,153 INFO     Test HITS@1 at step 79999: 0.173077
+2024-01-30 01:40:59,153 INFO     Test HITS@3 at step 79999: 0.250000
+2024-01-30 01:40:59,153 INFO     Test HITS@10 at step 79999: 0.384615
+2024-01-30 01:40:59,153 INFO     _member_meronym: 
+2024-01-30 01:40:59,154 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,154 INFO     Test MRR at step 79999: 0.255727
+2024-01-30 01:40:59,154 INFO     Test MR at step 79999: 1308.891304
+2024-01-30 01:40:59,154 INFO     Test HITS@1 at step 79999: 0.167984
+2024-01-30 01:40:59,154 INFO     Test HITS@3 at step 79999: 0.274704
+2024-01-30 01:40:59,154 INFO     Test HITS@10 at step 79999: 0.442688
+2024-01-30 01:40:59,154 INFO     _hypernym: 
+2024-01-30 01:40:59,154 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,154 INFO     Test MRR at step 79999: 0.155636
+2024-01-30 01:40:59,155 INFO     Test MR at step 79999: 6780.199440
+2024-01-30 01:40:59,155 INFO     Test HITS@1 at step 79999: 0.091926
+2024-01-30 01:40:59,155 INFO     Test HITS@3 at step 79999: 0.178257
+2024-01-30 01:40:59,155 INFO     Test HITS@10 at step 79999: 0.283373
+2024-01-30 01:40:59,155 INFO     _has_part: 
+2024-01-30 01:40:59,155 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,155 INFO     Test MRR at step 79999: 0.200283
+2024-01-30 01:40:59,155 INFO     Test MR at step 79999: 1925.255814
+2024-01-30 01:40:59,155 INFO     Test HITS@1 at step 79999: 0.104651
+2024-01-30 01:40:59,156 INFO     Test HITS@3 at step 79999: 0.255814
+2024-01-30 01:40:59,156 INFO     Test HITS@10 at step 79999: 0.392442
+2024-01-30 01:40:59,156 INFO     _derivationally_related_form: 
+2024-01-30 01:40:59,156 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,156 INFO     Test MRR at step 79999: 0.956818
+2024-01-30 01:40:59,156 INFO     Test MR at step 79999: 143.610801
+2024-01-30 01:40:59,156 INFO     Test HITS@1 at step 79999: 0.948790
+2024-01-30 01:40:59,156 INFO     Test HITS@3 at step 79999: 0.962291
+2024-01-30 01:40:59,157 INFO     Test HITS@10 at step 79999: 0.971136
+2024-01-30 01:40:59,157 INFO     _also_see: 
+2024-01-30 01:40:59,157 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,157 INFO     Test MRR at step 79999: 0.627160
+2024-01-30 01:40:59,157 INFO     Test MR at step 79999: 800.848214
+2024-01-30 01:40:59,157 INFO     Test HITS@1 at step 79999: 0.571429
+2024-01-30 01:40:59,157 INFO     Test HITS@3 at step 79999: 0.651786
+2024-01-30 01:40:59,157 INFO     Test HITS@10 at step 79999: 0.741071
+2024-01-30 01:40:59,157 INFO     _instance_hypernym: 
+2024-01-30 01:40:59,158 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,158 INFO     Test MRR at step 79999: 0.331790
+2024-01-30 01:40:59,158 INFO     Test MR at step 79999: 2906.053279
+2024-01-30 01:40:59,158 INFO     Test HITS@1 at step 79999: 0.229508
+2024-01-30 01:40:59,158 INFO     Test HITS@3 at step 79999: 0.397541
+2024-01-30 01:40:59,158 INFO     Test HITS@10 at step 79999: 0.540984
+2024-01-30 01:40:59,158 INFO     _synset_domain_topic_of: 
+2024-01-30 01:40:59,158 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,159 INFO     Test MRR at step 79999: 0.339927
+2024-01-30 01:40:59,159 INFO     Test MR at step 79999: 3706.605263
+2024-01-30 01:40:59,159 INFO     Test HITS@1 at step 79999: 0.263158
+2024-01-30 01:40:59,159 INFO     Test HITS@3 at step 79999: 0.377193
+2024-01-30 01:40:59,159 INFO     Test HITS@10 at step 79999: 0.482456
+2024-01-30 01:40:59,159 INFO     _similar_to: 
+2024-01-30 01:40:59,159 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:40:59,159 INFO     Test MRR at step 79999: 1.000000
+2024-01-30 01:40:59,159 INFO     Test MR at step 79999: 1.000000
+2024-01-30 01:40:59,160 INFO     Test HITS@1 at step 79999: 1.000000
+2024-01-30 01:40:59,160 INFO     Test HITS@3 at step 79999: 1.000000
+2024-01-30 01:40:59,160 INFO     Test HITS@10 at step 79999: 1.000000
+2024-01-30 01:40:59,160 INFO     Evaluating on sub_Test Dataset...
+2024-01-30 01:40:59,965 INFO     Evaluating the model... (0/44)
+2024-01-30 01:41:03,777 INFO     Cc_test.txt
+2024-01-30 01:41:03,777 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:41:03,777 INFO     Test MRR at step 79999: 0.200283
+2024-01-30 01:41:03,777 INFO     Test MR at step 79999: 1925.255814
+2024-01-30 01:41:03,777 INFO     Test HITS@1 at step 79999: 0.104651
+2024-01-30 01:41:03,777 INFO     Test HITS@3 at step 79999: 0.255814
+2024-01-30 01:41:03,778 INFO     Test HITS@10 at step 79999: 0.392442
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:41:03,778 INFO     _has_part: 
+2024-01-30 01:41:03,778 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:41:03,778 INFO     Test MRR at step 79999: 0.200283
+2024-01-30 01:41:03,778 INFO     Test MR at step 79999: 1925.255814
+2024-01-30 01:41:03,778 INFO     Test HITS@1 at step 79999: 0.104651
+2024-01-30 01:41:03,778 INFO     Test HITS@3 at step 79999: 0.255814
+2024-01-30 01:41:03,778 INFO     Test HITS@10 at step 79999: 0.392442
+2024-01-30 01:41:04,648 INFO     Evaluating the model... (0/280)
+2024-01-30 01:41:27,134 INFO     S_test.txt
+2024-01-30 01:41:27,134 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:41:27,134 INFO     Test MRR at step 79999: 0.957335
+2024-01-30 01:41:27,134 INFO     Test MR at step 79999: 140.561380
+2024-01-30 01:41:27,134 INFO     Test HITS@1 at step 79999: 0.949373
+2024-01-30 01:41:27,134 INFO     Test HITS@3 at step 79999: 0.962814
+2024-01-30 01:41:27,135 INFO     Test HITS@10 at step 79999: 0.971326
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:41:27,135 INFO     _verb_group: 
+2024-01-30 01:41:27,135 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:41:27,135 INFO     Test MRR at step 79999: 0.968298
+2024-01-30 01:41:27,135 INFO     Test MR at step 79999: 67.320513
+2024-01-30 01:41:27,135 INFO     Test HITS@1 at step 79999: 0.961538
+2024-01-30 01:41:27,135 INFO     Test HITS@3 at step 79999: 0.974359
+2024-01-30 01:41:27,135 INFO     Test HITS@10 at step 79999: 0.974359
+2024-01-30 01:41:27,136 INFO     _derivationally_related_form: 
+2024-01-30 01:41:27,136 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:41:27,136 INFO     Test MRR at step 79999: 0.956818
+2024-01-30 01:41:27,136 INFO     Test MR at step 79999: 143.610801
+2024-01-30 01:41:27,136 INFO     Test HITS@1 at step 79999: 0.948790
+2024-01-30 01:41:27,136 INFO     Test HITS@3 at step 79999: 0.962291
+2024-01-30 01:41:27,136 INFO     Test HITS@10 at step 79999: 0.971136
+2024-01-30 01:41:27,136 INFO     _similar_to: 
+2024-01-30 01:41:27,136 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:41:27,137 INFO     Test MRR at step 79999: 1.000000
+2024-01-30 01:41:27,137 INFO     Test MR at step 79999: 1.000000
+2024-01-30 01:41:27,137 INFO     Test HITS@1 at step 79999: 1.000000
+2024-01-30 01:41:27,137 INFO     Test HITS@3 at step 79999: 1.000000
+2024-01-30 01:41:27,137 INFO     Test HITS@10 at step 79999: 1.000000
+2024-01-30 01:41:27,999 INFO     Evaluating the model... (0/448)
+2024-01-30 01:42:03,204 INFO     A_test.txt
+2024-01-30 01:42:03,205 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:03,205 INFO     Test MRR at step 79999: 0.196491
+2024-01-30 01:42:03,205 INFO     Test MR at step 79999: 5521.538547
+2024-01-30 01:42:03,205 INFO     Test HITS@1 at step 79999: 0.126536
+2024-01-30 01:42:03,205 INFO     Test HITS@3 at step 79999: 0.221788
+2024-01-30 01:42:03,205 INFO     Test HITS@10 at step 79999: 0.338547
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:42:03,205 INFO     _member_of_domain_usage: 
+2024-01-30 01:42:03,205 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:03,205 INFO     Test MRR at step 79999: 0.293969
+2024-01-30 01:42:03,206 INFO     Test MR at step 79999: 5062.104167
+2024-01-30 01:42:03,206 INFO     Test HITS@1 at step 79999: 0.270833
+2024-01-30 01:42:03,206 INFO     Test HITS@3 at step 79999: 0.270833
+2024-01-30 01:42:03,206 INFO     Test HITS@10 at step 79999: 0.354167
+2024-01-30 01:42:03,206 INFO     _member_of_domain_region: 
+2024-01-30 01:42:03,206 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:03,206 INFO     Test MRR at step 79999: 0.232062
+2024-01-30 01:42:03,206 INFO     Test MR at step 79999: 6607.423077
+2024-01-30 01:42:03,206 INFO     Test HITS@1 at step 79999: 0.173077
+2024-01-30 01:42:03,206 INFO     Test HITS@3 at step 79999: 0.250000
+2024-01-30 01:42:03,206 INFO     Test HITS@10 at step 79999: 0.384615
+2024-01-30 01:42:03,206 INFO     _member_meronym: 
+2024-01-30 01:42:03,207 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:03,207 INFO     Test MRR at step 79999: 0.255727
+2024-01-30 01:42:03,207 INFO     Test MR at step 79999: 1308.891304
+2024-01-30 01:42:03,207 INFO     Test HITS@1 at step 79999: 0.167984
+2024-01-30 01:42:03,207 INFO     Test HITS@3 at step 79999: 0.274704
+2024-01-30 01:42:03,207 INFO     Test HITS@10 at step 79999: 0.442688
+2024-01-30 01:42:03,207 INFO     _hypernym: 
+2024-01-30 01:42:03,207 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:03,207 INFO     Test MRR at step 79999: 0.155636
+2024-01-30 01:42:03,207 INFO     Test MR at step 79999: 6780.199440
+2024-01-30 01:42:03,207 INFO     Test HITS@1 at step 79999: 0.091926
+2024-01-30 01:42:03,208 INFO     Test HITS@3 at step 79999: 0.178257
+2024-01-30 01:42:03,208 INFO     Test HITS@10 at step 79999: 0.283373
+2024-01-30 01:42:03,208 INFO     _instance_hypernym: 
+2024-01-30 01:42:03,208 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:03,208 INFO     Test MRR at step 79999: 0.331790
+2024-01-30 01:42:03,208 INFO     Test MR at step 79999: 2906.053279
+2024-01-30 01:42:03,208 INFO     Test HITS@1 at step 79999: 0.229508
+2024-01-30 01:42:03,208 INFO     Test HITS@3 at step 79999: 0.397541
+2024-01-30 01:42:03,208 INFO     Test HITS@10 at step 79999: 0.540984
+2024-01-30 01:42:03,208 INFO     _synset_domain_topic_of: 
+2024-01-30 01:42:03,208 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:03,209 INFO     Test MRR at step 79999: 0.339927
+2024-01-30 01:42:03,209 INFO     Test MR at step 79999: 3706.605263
+2024-01-30 01:42:03,209 INFO     Test HITS@1 at step 79999: 0.263158
+2024-01-30 01:42:03,209 INFO     Test HITS@3 at step 79999: 0.377193
+2024-01-30 01:42:03,209 INFO     Test HITS@10 at step 79999: 0.482456
+2024-01-30 01:42:04,062 INFO     Evaluating the model... (0/280)
+2024-01-30 01:42:26,058 INFO     Ss_test.txt
+2024-01-30 01:42:26,059 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:26,059 INFO     Test MRR at step 79999: 0.957335
+2024-01-30 01:42:26,059 INFO     Test MR at step 79999: 140.561380
+2024-01-30 01:42:26,059 INFO     Test HITS@1 at step 79999: 0.949373
+2024-01-30 01:42:26,059 INFO     Test HITS@3 at step 79999: 0.962814
+2024-01-30 01:42:26,059 INFO     Test HITS@10 at step 79999: 0.971326
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:42:26,059 INFO     _verb_group: 
+2024-01-30 01:42:26,059 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:26,059 INFO     Test MRR at step 79999: 0.968298
+2024-01-30 01:42:26,059 INFO     Test MR at step 79999: 67.320513
+2024-01-30 01:42:26,059 INFO     Test HITS@1 at step 79999: 0.961538
+2024-01-30 01:42:26,060 INFO     Test HITS@3 at step 79999: 0.974359
+2024-01-30 01:42:26,060 INFO     Test HITS@10 at step 79999: 0.974359
+2024-01-30 01:42:26,060 INFO     _derivationally_related_form: 
+2024-01-30 01:42:26,060 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:26,060 INFO     Test MRR at step 79999: 0.956818
+2024-01-30 01:42:26,060 INFO     Test MR at step 79999: 143.610801
+2024-01-30 01:42:26,060 INFO     Test HITS@1 at step 79999: 0.948790
+2024-01-30 01:42:26,060 INFO     Test HITS@3 at step 79999: 0.962291
+2024-01-30 01:42:26,060 INFO     Test HITS@10 at step 79999: 0.971136
+2024-01-30 01:42:26,060 INFO     _similar_to: 
+2024-01-30 01:42:26,060 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:26,060 INFO     Test MRR at step 79999: 1.000000
+2024-01-30 01:42:26,061 INFO     Test MR at step 79999: 1.000000
+2024-01-30 01:42:26,061 INFO     Test HITS@1 at step 79999: 1.000000
+2024-01-30 01:42:26,061 INFO     Test HITS@3 at step 79999: 1.000000
+2024-01-30 01:42:26,061 INFO     Test HITS@10 at step 79999: 1.000000
+2024-01-30 01:42:26,958 INFO     Evaluating the model... (0/44)
+2024-01-30 01:42:30,749 INFO     AC_test.txt
+2024-01-30 01:42:30,749 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:30,749 INFO     Test MRR at step 79999: 0.200283
+2024-01-30 01:42:30,750 INFO     Test MR at step 79999: 1925.255814
+2024-01-30 01:42:30,750 INFO     Test HITS@1 at step 79999: 0.104651
+2024-01-30 01:42:30,750 INFO     Test HITS@3 at step 79999: 0.255814
+2024-01-30 01:42:30,750 INFO     Test HITS@10 at step 79999: 0.392442
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:42:30,750 INFO     _has_part: 
+2024-01-30 01:42:30,750 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:42:30,750 INFO     Test MRR at step 79999: 0.200283
+2024-01-30 01:42:30,750 INFO     Test MR at step 79999: 1925.255814
+2024-01-30 01:42:30,750 INFO     Test HITS@1 at step 79999: 0.104651
+2024-01-30 01:42:30,750 INFO     Test HITS@3 at step 79999: 0.255814
+2024-01-30 01:42:30,750 INFO     Test HITS@10 at step 79999: 0.392442
+2024-01-30 01:42:31,539 INFO     Evaluating the model... (0/492)
+2024-01-30 01:43:09,929 INFO     Aa_test.txt
+2024-01-30 01:43:09,929 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:43:09,929 INFO     Test MRR at step 79999: 0.196823
+2024-01-30 01:43:09,929 INFO     Test MR at step 79999: 5206.268094
+2024-01-30 01:43:09,929 INFO     Test HITS@1 at step 79999: 0.124618
+2024-01-30 01:43:09,930 INFO     Test HITS@3 at step 79999: 0.224771
+2024-01-30 01:43:09,930 INFO     Test HITS@10 at step 79999: 0.343272
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:43:09,930 INFO     _member_of_domain_usage: 
+2024-01-30 01:43:09,930 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:43:09,930 INFO     Test MRR at step 79999: 0.293969
+2024-01-30 01:43:09,930 INFO     Test MR at step 79999: 5062.104167
+2024-01-30 01:43:09,930 INFO     Test HITS@1 at step 79999: 0.270833
+2024-01-30 01:43:09,930 INFO     Test HITS@3 at step 79999: 0.270833
+2024-01-30 01:43:09,930 INFO     Test HITS@10 at step 79999: 0.354167
+2024-01-30 01:43:09,930 INFO     _member_of_domain_region: 
+2024-01-30 01:43:09,930 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:43:09,930 INFO     Test MRR at step 79999: 0.232062
+2024-01-30 01:43:09,931 INFO     Test MR at step 79999: 6607.423077
+2024-01-30 01:43:09,931 INFO     Test HITS@1 at step 79999: 0.173077
+2024-01-30 01:43:09,931 INFO     Test HITS@3 at step 79999: 0.250000
+2024-01-30 01:43:09,931 INFO     Test HITS@10 at step 79999: 0.384615
+2024-01-30 01:43:09,931 INFO     _member_meronym: 
+2024-01-30 01:43:09,931 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:43:09,931 INFO     Test MRR at step 79999: 0.255727
+2024-01-30 01:43:09,931 INFO     Test MR at step 79999: 1308.891304
+2024-01-30 01:43:09,931 INFO     Test HITS@1 at step 79999: 0.167984
+2024-01-30 01:43:09,931 INFO     Test HITS@3 at step 79999: 0.274704
+2024-01-30 01:43:09,931 INFO     Test HITS@10 at step 79999: 0.442688
+2024-01-30 01:43:09,932 INFO     _hypernym: 
+2024-01-30 01:43:09,932 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:43:09,932 INFO     Test MRR at step 79999: 0.155636
+2024-01-30 01:43:09,932 INFO     Test MR at step 79999: 6780.199440
+2024-01-30 01:43:09,932 INFO     Test HITS@1 at step 79999: 0.091926
+2024-01-30 01:43:09,932 INFO     Test HITS@3 at step 79999: 0.178257
+2024-01-30 01:43:09,932 INFO     Test HITS@10 at step 79999: 0.283373
+2024-01-30 01:43:09,932 INFO     _has_part: 
+2024-01-30 01:43:09,932 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:43:09,932 INFO     Test MRR at step 79999: 0.200283
+2024-01-30 01:43:09,932 INFO     Test MR at step 79999: 1925.255814
+2024-01-30 01:43:09,932 INFO     Test HITS@1 at step 79999: 0.104651
+2024-01-30 01:43:09,933 INFO     Test HITS@3 at step 79999: 0.255814
+2024-01-30 01:43:09,933 INFO     Test HITS@10 at step 79999: 0.392442
+2024-01-30 01:43:09,933 INFO     _instance_hypernym: 
+2024-01-30 01:43:09,933 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:43:09,933 INFO     Test MRR at step 79999: 0.331790
+2024-01-30 01:43:09,933 INFO     Test MR at step 79999: 2906.053279
+2024-01-30 01:43:09,933 INFO     Test HITS@1 at step 79999: 0.229508
+2024-01-30 01:43:09,933 INFO     Test HITS@3 at step 79999: 0.397541
+2024-01-30 01:43:09,933 INFO     Test HITS@10 at step 79999: 0.540984
+2024-01-30 01:43:09,933 INFO     _synset_domain_topic_of: 
+2024-01-30 01:43:09,933 INFO     Test ******* Model RotatE ****  at step 79999: 1.000000
+2024-01-30 01:43:09,934 INFO     Test MRR at step 79999: 0.339927
+2024-01-30 01:43:09,934 INFO     Test MR at step 79999: 3706.605263
+2024-01-30 01:43:09,934 INFO     Test HITS@1 at step 79999: 0.263158
+2024-01-30 01:43:09,934 INFO     Test HITS@3 at step 79999: 0.377193
+2024-01-30 01:43:09,934 INFO     Test HITS@10 at step 79999: 0.482456

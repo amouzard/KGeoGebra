@@ -1,0 +1,345 @@
+1.10.2
+Start Evaluation on Test Data Set......
+2024-01-30 01:18:07,072 INFO     Model: Butterfly_bias
+2024-01-30 01:18:07,072 INFO     Data Path: data/wn18rr
+2024-01-30 01:18:07,072 INFO     #entity: 40943
+2024-01-30 01:18:07,072 INFO     #relation: 11
+2024-01-30 01:18:07,296 INFO     #train: 86835
+2024-01-30 01:18:07,314 INFO     #valid: 3034
+2024-01-30 01:18:07,330 INFO     #test: 3134
+2024-01-30 01:18:07,331 INFO     C_test.txt#test: 0
+2024-01-30 01:18:07,341 INFO     Cc_test.txt#test: 172
+2024-01-30 01:18:07,363 INFO     S_test.txt#test: 1116
+2024-01-30 01:18:07,380 INFO     A_test.txt#test: 1790
+2024-01-30 01:18:07,381 INFO     AS_test.txt#test: 0
+2024-01-30 01:18:07,381 INFO     CS_test.txt#test: 0
+2024-01-30 01:18:07,393 INFO     Ss_test.txt#test: 1116
+2024-01-30 01:18:07,393 INFO     ACS_test.txt#test: 0
+2024-01-30 01:18:07,403 INFO     AC_test.txt#test: 172
+2024-01-30 01:18:07,421 INFO     Aa_test.txt#test: 1962
+2024-01-30 01:18:08,120 INFO     Model Parameter Configuration:
+2024-01-30 01:18:08,121 INFO     Parameter gamma: torch.Size([1]), require_grad = False
+2024-01-30 01:18:08,121 INFO     Parameter embedding_range: torch.Size([1]), require_grad = False
+2024-01-30 01:18:08,121 INFO     Parameter entity_embedding: torch.Size([40943, 1600]), require_grad = True
+2024-01-30 01:18:08,121 INFO     Parameter relation_embedding: torch.Size([11, 1600]), require_grad = True
+2024-01-30 01:18:08,121 INFO     Parameter ellipse: torch.Size([1600]), require_grad = True
+2024-01-30 01:18:18,178 INFO     Loading checkpoint models/Butterfly_bias_wn18rr_BuBWR2...
+2024-01-30 01:18:23,163 INFO     Start Training...
+2024-01-30 01:18:23,163 INFO     init_step = 149999
+2024-01-30 01:18:23,163 INFO     batch_size = 1024
+2024-01-30 01:18:23,163 INFO     negative_adversarial_sampling = 0
+2024-01-30 01:18:23,163 INFO     hidden_dim = 800
+2024-01-30 01:18:23,163 INFO     gamma = 12.000000
+2024-01-30 01:18:23,163 INFO     negative_sample_size = 128
+2024-01-30 01:18:23,163 INFO     negative_adversarial_sampling = False
+2024-01-30 01:18:23,163 INFO     learning_rate = 0.000010
+2024-01-30 01:18:25,793 INFO     Evaluating on Valid Dataset...
+2024-01-30 01:18:27,357 INFO     Evaluating the model... (0/380)
+2024-01-30 01:19:42,852 INFO     Valid ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:19:42,852 INFO     Valid MRR at step 149999: 0.453656
+2024-01-30 01:19:42,852 INFO     Valid MR at step 149999: 5216.946770
+2024-01-30 01:19:42,852 INFO     Valid HITS@1 at step 149999: 0.412657
+2024-01-30 01:19:42,852 INFO     Valid HITS@3 at step 149999: 0.471160
+2024-01-30 01:19:42,852 INFO     Valid HITS@10 at step 149999: 0.526038
+2024-01-30 01:19:42,852 INFO     Evaluating on Test Dataset...
+2024-01-30 01:19:44,277 INFO     Evaluating the model... (0/392)
+2024-01-30 01:21:03,151 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,151 INFO     Test MRR at step 149999: 0.454833
+2024-01-30 01:21:03,152 INFO     Test MR at step 149999: 5303.814454
+2024-01-30 01:21:03,152 INFO     Test HITS@1 at step 149999: 0.411295
+2024-01-30 01:21:03,152 INFO     Test HITS@3 at step 149999: 0.477186
+2024-01-30 01:21:03,152 INFO     Test HITS@10 at step 149999: 0.532546
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:21:03,152 INFO     _member_of_domain_usage: 
+2024-01-30 01:21:03,152 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,152 INFO     Test MRR at step 149999: 0.303391
+2024-01-30 01:21:03,152 INFO     Test MR at step 149999: 11829.791667
+2024-01-30 01:21:03,152 INFO     Test HITS@1 at step 149999: 0.250000
+2024-01-30 01:21:03,152 INFO     Test HITS@3 at step 149999: 0.312500
+2024-01-30 01:21:03,153 INFO     Test HITS@10 at step 149999: 0.437500
+2024-01-30 01:21:03,153 INFO     _verb_group: 
+2024-01-30 01:21:03,153 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,153 INFO     Test MRR at step 149999: 0.632175
+2024-01-30 01:21:03,153 INFO     Test MR at step 149999: 405.512821
+2024-01-30 01:21:03,153 INFO     Test HITS@1 at step 149999: 0.307692
+2024-01-30 01:21:03,153 INFO     Test HITS@3 at step 149999: 0.948718
+2024-01-30 01:21:03,153 INFO     Test HITS@10 at step 149999: 0.974359
+2024-01-30 01:21:03,153 INFO     _member_of_domain_region: 
+2024-01-30 01:21:03,153 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,153 INFO     Test MRR at step 149999: 0.329278
+2024-01-30 01:21:03,154 INFO     Test MR at step 149999: 11846.923077
+2024-01-30 01:21:03,154 INFO     Test HITS@1 at step 149999: 0.250000
+2024-01-30 01:21:03,154 INFO     Test HITS@3 at step 149999: 0.365385
+2024-01-30 01:21:03,154 INFO     Test HITS@10 at step 149999: 0.480769
+2024-01-30 01:21:03,154 INFO     _member_meronym: 
+2024-01-30 01:21:03,154 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,154 INFO     Test MRR at step 149999: 0.180184
+2024-01-30 01:21:03,154 INFO     Test MR at step 149999: 4455.911067
+2024-01-30 01:21:03,154 INFO     Test HITS@1 at step 149999: 0.118577
+2024-01-30 01:21:03,154 INFO     Test HITS@3 at step 149999: 0.207510
+2024-01-30 01:21:03,155 INFO     Test HITS@10 at step 149999: 0.276680
+2024-01-30 01:21:03,155 INFO     _hypernym: 
+2024-01-30 01:21:03,155 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,155 INFO     Test MRR at step 149999: 0.150205
+2024-01-30 01:21:03,155 INFO     Test MR at step 149999: 9387.110711
+2024-01-30 01:21:03,155 INFO     Test HITS@1 at step 149999: 0.098721
+2024-01-30 01:21:03,155 INFO     Test HITS@3 at step 149999: 0.171463
+2024-01-30 01:21:03,155 INFO     Test HITS@10 at step 149999: 0.250600
+2024-01-30 01:21:03,155 INFO     _has_part: 
+2024-01-30 01:21:03,155 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,155 INFO     Test MRR at step 149999: 0.168869
+2024-01-30 01:21:03,156 INFO     Test MR at step 149999: 8344.750000
+2024-01-30 01:21:03,156 INFO     Test HITS@1 at step 149999: 0.110465
+2024-01-30 01:21:03,156 INFO     Test HITS@3 at step 149999: 0.197674
+2024-01-30 01:21:03,156 INFO     Test HITS@10 at step 149999: 0.287791
+2024-01-30 01:21:03,156 INFO     _derivationally_related_form: 
+2024-01-30 01:21:03,156 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,156 INFO     Test MRR at step 149999: 0.954986
+2024-01-30 01:21:03,156 INFO     Test MR at step 149999: 362.070298
+2024-01-30 01:21:03,156 INFO     Test HITS@1 at step 149999: 0.947393
+2024-01-30 01:21:03,156 INFO     Test HITS@3 at step 149999: 0.959497
+2024-01-30 01:21:03,157 INFO     Test HITS@10 at step 149999: 0.968343
+2024-01-30 01:21:03,157 INFO     _also_see: 
+2024-01-30 01:21:03,157 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,157 INFO     Test MRR at step 149999: 0.555572
+2024-01-30 01:21:03,157 INFO     Test MR at step 149999: 1347.169643
+2024-01-30 01:21:03,157 INFO     Test HITS@1 at step 149999: 0.455357
+2024-01-30 01:21:03,157 INFO     Test HITS@3 at step 149999: 0.633929
+2024-01-30 01:21:03,157 INFO     Test HITS@10 at step 149999: 0.696429
+2024-01-30 01:21:03,157 INFO     _instance_hypernym: 
+2024-01-30 01:21:03,157 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,157 INFO     Test MRR at step 149999: 0.251108
+2024-01-30 01:21:03,158 INFO     Test MR at step 149999: 2446.454918
+2024-01-30 01:21:03,158 INFO     Test HITS@1 at step 149999: 0.159836
+2024-01-30 01:21:03,158 INFO     Test HITS@3 at step 149999: 0.299180
+2024-01-30 01:21:03,158 INFO     Test HITS@10 at step 149999: 0.422131
+2024-01-30 01:21:03,158 INFO     _synset_domain_topic_of: 
+2024-01-30 01:21:03,158 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,158 INFO     Test MRR at step 149999: 0.280768
+2024-01-30 01:21:03,158 INFO     Test MR at step 149999: 8295.710526
+2024-01-30 01:21:03,158 INFO     Test HITS@1 at step 149999: 0.232456
+2024-01-30 01:21:03,158 INFO     Test HITS@3 at step 149999: 0.307018
+2024-01-30 01:21:03,158 INFO     Test HITS@10 at step 149999: 0.364035
+2024-01-30 01:21:03,159 INFO     _similar_to: 
+2024-01-30 01:21:03,159 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:03,159 INFO     Test MRR at step 149999: 1.000000
+2024-01-30 01:21:03,159 INFO     Test MR at step 149999: 1.000000
+2024-01-30 01:21:03,159 INFO     Test HITS@1 at step 149999: 1.000000
+2024-01-30 01:21:03,159 INFO     Test HITS@3 at step 149999: 1.000000
+2024-01-30 01:21:03,159 INFO     Test HITS@10 at step 149999: 1.000000
+2024-01-30 01:21:03,159 INFO     Evaluating on sub_Test Dataset...
+2024-01-30 01:21:04,639 INFO     Evaluating the model... (0/22)
+2024-01-30 01:21:09,428 INFO     Cc_test.txt
+2024-01-30 01:21:09,428 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:09,428 INFO     Test MRR at step 149999: 0.168869
+2024-01-30 01:21:09,428 INFO     Test MR at step 149999: 8344.750000
+2024-01-30 01:21:09,428 INFO     Test HITS@1 at step 149999: 0.110465
+2024-01-30 01:21:09,429 INFO     Test HITS@3 at step 149999: 0.197674
+2024-01-30 01:21:09,429 INFO     Test HITS@10 at step 149999: 0.287791
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:21:09,429 INFO     _has_part: 
+2024-01-30 01:21:09,429 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:09,429 INFO     Test MRR at step 149999: 0.168869
+2024-01-30 01:21:09,429 INFO     Test MR at step 149999: 8344.750000
+2024-01-30 01:21:09,429 INFO     Test HITS@1 at step 149999: 0.110465
+2024-01-30 01:21:09,429 INFO     Test HITS@3 at step 149999: 0.197674
+2024-01-30 01:21:09,429 INFO     Test HITS@10 at step 149999: 0.287791
+2024-01-30 01:21:10,981 INFO     Evaluating the model... (0/140)
+2024-01-30 01:21:39,838 INFO     S_test.txt
+2024-01-30 01:21:39,838 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:39,838 INFO     Test MRR at step 149999: 0.943826
+2024-01-30 01:21:39,838 INFO     Test MR at step 149999: 362.617832
+2024-01-30 01:21:39,838 INFO     Test HITS@1 at step 149999: 0.925179
+2024-01-30 01:21:39,838 INFO     Test HITS@3 at step 149999: 0.959229
+2024-01-30 01:21:39,838 INFO     Test HITS@10 at step 149999: 0.968638
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:21:39,839 INFO     _verb_group: 
+2024-01-30 01:21:39,839 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:39,839 INFO     Test MRR at step 149999: 0.632175
+2024-01-30 01:21:39,839 INFO     Test MR at step 149999: 405.512821
+2024-01-30 01:21:39,839 INFO     Test HITS@1 at step 149999: 0.307692
+2024-01-30 01:21:39,839 INFO     Test HITS@3 at step 149999: 0.948718
+2024-01-30 01:21:39,839 INFO     Test HITS@10 at step 149999: 0.974359
+2024-01-30 01:21:39,839 INFO     _derivationally_related_form: 
+2024-01-30 01:21:39,839 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:39,839 INFO     Test MRR at step 149999: 0.954986
+2024-01-30 01:21:39,840 INFO     Test MR at step 149999: 362.070298
+2024-01-30 01:21:39,840 INFO     Test HITS@1 at step 149999: 0.947393
+2024-01-30 01:21:39,840 INFO     Test HITS@3 at step 149999: 0.959497
+2024-01-30 01:21:39,840 INFO     Test HITS@10 at step 149999: 0.968343
+2024-01-30 01:21:39,840 INFO     _similar_to: 
+2024-01-30 01:21:39,840 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:21:39,840 INFO     Test MRR at step 149999: 1.000000
+2024-01-30 01:21:39,840 INFO     Test MR at step 149999: 1.000000
+2024-01-30 01:21:39,840 INFO     Test HITS@1 at step 149999: 1.000000
+2024-01-30 01:21:39,840 INFO     Test HITS@3 at step 149999: 1.000000
+2024-01-30 01:21:39,840 INFO     Test HITS@10 at step 149999: 1.000000
+2024-01-30 01:21:41,392 INFO     Evaluating the model... (0/224)
+2024-01-30 01:22:25,212 INFO     A_test.txt
+2024-01-30 01:22:25,212 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:25,212 INFO     Test MRR at step 149999: 0.174289
+2024-01-30 01:22:25,212 INFO     Test MR at step 149999: 8216.052793
+2024-01-30 01:22:25,213 INFO     Test HITS@1 at step 149999: 0.118436
+2024-01-30 01:22:25,213 INFO     Test HITS@3 at step 149999: 0.198603
+2024-01-30 01:22:25,213 INFO     Test HITS@10 at step 149999: 0.279050
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:22:25,213 INFO     _member_of_domain_usage: 
+2024-01-30 01:22:25,213 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:25,213 INFO     Test MRR at step 149999: 0.303391
+2024-01-30 01:22:25,213 INFO     Test MR at step 149999: 11829.791667
+2024-01-30 01:22:25,213 INFO     Test HITS@1 at step 149999: 0.250000
+2024-01-30 01:22:25,213 INFO     Test HITS@3 at step 149999: 0.312500
+2024-01-30 01:22:25,213 INFO     Test HITS@10 at step 149999: 0.437500
+2024-01-30 01:22:25,214 INFO     _member_of_domain_region: 
+2024-01-30 01:22:25,214 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:25,214 INFO     Test MRR at step 149999: 0.329278
+2024-01-30 01:22:25,214 INFO     Test MR at step 149999: 11846.923077
+2024-01-30 01:22:25,214 INFO     Test HITS@1 at step 149999: 0.250000
+2024-01-30 01:22:25,214 INFO     Test HITS@3 at step 149999: 0.365385
+2024-01-30 01:22:25,214 INFO     Test HITS@10 at step 149999: 0.480769
+2024-01-30 01:22:25,214 INFO     _member_meronym: 
+2024-01-30 01:22:25,214 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:25,214 INFO     Test MRR at step 149999: 0.180184
+2024-01-30 01:22:25,214 INFO     Test MR at step 149999: 4455.911067
+2024-01-30 01:22:25,215 INFO     Test HITS@1 at step 149999: 0.118577
+2024-01-30 01:22:25,215 INFO     Test HITS@3 at step 149999: 0.207510
+2024-01-30 01:22:25,215 INFO     Test HITS@10 at step 149999: 0.276680
+2024-01-30 01:22:25,215 INFO     _hypernym: 
+2024-01-30 01:22:25,215 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:25,215 INFO     Test MRR at step 149999: 0.150205
+2024-01-30 01:22:25,215 INFO     Test MR at step 149999: 9387.110711
+2024-01-30 01:22:25,215 INFO     Test HITS@1 at step 149999: 0.098721
+2024-01-30 01:22:25,215 INFO     Test HITS@3 at step 149999: 0.171463
+2024-01-30 01:22:25,215 INFO     Test HITS@10 at step 149999: 0.250600
+2024-01-30 01:22:25,215 INFO     _instance_hypernym: 
+2024-01-30 01:22:25,216 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:25,216 INFO     Test MRR at step 149999: 0.251108
+2024-01-30 01:22:25,216 INFO     Test MR at step 149999: 2446.454918
+2024-01-30 01:22:25,216 INFO     Test HITS@1 at step 149999: 0.159836
+2024-01-30 01:22:25,216 INFO     Test HITS@3 at step 149999: 0.299180
+2024-01-30 01:22:25,216 INFO     Test HITS@10 at step 149999: 0.422131
+2024-01-30 01:22:25,216 INFO     _synset_domain_topic_of: 
+2024-01-30 01:22:25,216 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:25,216 INFO     Test MRR at step 149999: 0.280768
+2024-01-30 01:22:25,216 INFO     Test MR at step 149999: 8295.710526
+2024-01-30 01:22:25,217 INFO     Test HITS@1 at step 149999: 0.232456
+2024-01-30 01:22:25,217 INFO     Test HITS@3 at step 149999: 0.307018
+2024-01-30 01:22:25,217 INFO     Test HITS@10 at step 149999: 0.364035
+2024-01-30 01:22:26,500 INFO     Evaluating the model... (0/140)
+2024-01-30 01:22:55,055 INFO     Ss_test.txt
+2024-01-30 01:22:55,055 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:55,055 INFO     Test MRR at step 149999: 0.943826
+2024-01-30 01:22:55,055 INFO     Test MR at step 149999: 362.617832
+2024-01-30 01:22:55,055 INFO     Test HITS@1 at step 149999: 0.925179
+2024-01-30 01:22:55,055 INFO     Test HITS@3 at step 149999: 0.959229
+2024-01-30 01:22:55,056 INFO     Test HITS@10 at step 149999: 0.968638
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:22:55,056 INFO     _verb_group: 
+2024-01-30 01:22:55,056 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:55,056 INFO     Test MRR at step 149999: 0.632175
+2024-01-30 01:22:55,056 INFO     Test MR at step 149999: 405.512821
+2024-01-30 01:22:55,056 INFO     Test HITS@1 at step 149999: 0.307692
+2024-01-30 01:22:55,056 INFO     Test HITS@3 at step 149999: 0.948718
+2024-01-30 01:22:55,056 INFO     Test HITS@10 at step 149999: 0.974359
+2024-01-30 01:22:55,056 INFO     _derivationally_related_form: 
+2024-01-30 01:22:55,056 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:55,057 INFO     Test MRR at step 149999: 0.954986
+2024-01-30 01:22:55,057 INFO     Test MR at step 149999: 362.070298
+2024-01-30 01:22:55,057 INFO     Test HITS@1 at step 149999: 0.947393
+2024-01-30 01:22:55,057 INFO     Test HITS@3 at step 149999: 0.959497
+2024-01-30 01:22:55,057 INFO     Test HITS@10 at step 149999: 0.968343
+2024-01-30 01:22:55,057 INFO     _similar_to: 
+2024-01-30 01:22:55,057 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:22:55,057 INFO     Test MRR at step 149999: 1.000000
+2024-01-30 01:22:55,057 INFO     Test MR at step 149999: 1.000000
+2024-01-30 01:22:55,057 INFO     Test HITS@1 at step 149999: 1.000000
+2024-01-30 01:22:55,057 INFO     Test HITS@3 at step 149999: 1.000000
+2024-01-30 01:22:55,058 INFO     Test HITS@10 at step 149999: 1.000000
+2024-01-30 01:22:56,548 INFO     Evaluating the model... (0/22)
+2024-01-30 01:23:01,566 INFO     AC_test.txt
+2024-01-30 01:23:01,566 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:23:01,566 INFO     Test MRR at step 149999: 0.168869
+2024-01-30 01:23:01,566 INFO     Test MR at step 149999: 8344.750000
+2024-01-30 01:23:01,566 INFO     Test HITS@1 at step 149999: 0.110465
+2024-01-30 01:23:01,566 INFO     Test HITS@3 at step 149999: 0.197674
+2024-01-30 01:23:01,566 INFO     Test HITS@10 at step 149999: 0.287791
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:23:01,567 INFO     _has_part: 
+2024-01-30 01:23:01,567 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:23:01,567 INFO     Test MRR at step 149999: 0.168869
+2024-01-30 01:23:01,567 INFO     Test MR at step 149999: 8344.750000
+2024-01-30 01:23:01,567 INFO     Test HITS@1 at step 149999: 0.110465
+2024-01-30 01:23:01,567 INFO     Test HITS@3 at step 149999: 0.197674
+2024-01-30 01:23:01,567 INFO     Test HITS@10 at step 149999: 0.287791
+2024-01-30 01:23:03,154 INFO     Evaluating the model... (0/246)
+2024-01-30 01:23:51,772 INFO     Aa_test.txt
+2024-01-30 01:23:51,772 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:23:51,772 INFO     Test MRR at step 149999: 0.173814
+2024-01-30 01:23:51,772 INFO     Test MR at step 149999: 8227.335117
+2024-01-30 01:23:51,772 INFO     Test HITS@1 at step 149999: 0.117737
+2024-01-30 01:23:51,772 INFO     Test HITS@3 at step 149999: 0.198522
+2024-01-30 01:23:51,772 INFO     Test HITS@10 at step 149999: 0.279817
+################################################## 
+ ################################################## 
+Print the evaluation logs for every relation:
+2024-01-30 01:23:51,772 INFO     _member_of_domain_usage: 
+2024-01-30 01:23:51,772 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:23:51,773 INFO     Test MRR at step 149999: 0.303391
+2024-01-30 01:23:51,773 INFO     Test MR at step 149999: 11829.791667
+2024-01-30 01:23:51,773 INFO     Test HITS@1 at step 149999: 0.250000
+2024-01-30 01:23:51,773 INFO     Test HITS@3 at step 149999: 0.312500
+2024-01-30 01:23:51,773 INFO     Test HITS@10 at step 149999: 0.437500
+2024-01-30 01:23:51,773 INFO     _member_of_domain_region: 
+2024-01-30 01:23:51,773 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:23:51,773 INFO     Test MRR at step 149999: 0.329278
+2024-01-30 01:23:51,773 INFO     Test MR at step 149999: 11846.923077
+2024-01-30 01:23:51,773 INFO     Test HITS@1 at step 149999: 0.250000
+2024-01-30 01:23:51,773 INFO     Test HITS@3 at step 149999: 0.365385
+2024-01-30 01:23:51,773 INFO     Test HITS@10 at step 149999: 0.480769
+2024-01-30 01:23:51,773 INFO     _member_meronym: 
+2024-01-30 01:23:51,773 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:23:51,774 INFO     Test MRR at step 149999: 0.180184
+2024-01-30 01:23:51,774 INFO     Test MR at step 149999: 4455.911067
+2024-01-30 01:23:51,774 INFO     Test HITS@1 at step 149999: 0.118577
+2024-01-30 01:23:51,774 INFO     Test HITS@3 at step 149999: 0.207510
+2024-01-30 01:23:51,774 INFO     Test HITS@10 at step 149999: 0.276680
+2024-01-30 01:23:51,774 INFO     _hypernym: 
+2024-01-30 01:23:51,774 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:23:51,774 INFO     Test MRR at step 149999: 0.150205
+2024-01-30 01:23:51,774 INFO     Test MR at step 149999: 9387.110711
+2024-01-30 01:23:51,774 INFO     Test HITS@1 at step 149999: 0.098721
+2024-01-30 01:23:51,774 INFO     Test HITS@3 at step 149999: 0.171463
+2024-01-30 01:23:51,774 INFO     Test HITS@10 at step 149999: 0.250600
+2024-01-30 01:23:51,774 INFO     _has_part: 
+2024-01-30 01:23:51,774 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:23:51,775 INFO     Test MRR at step 149999: 0.168869
+2024-01-30 01:23:51,775 INFO     Test MR at step 149999: 8344.750000
+2024-01-30 01:23:51,775 INFO     Test HITS@1 at step 149999: 0.110465
+2024-01-30 01:23:51,775 INFO     Test HITS@3 at step 149999: 0.197674
+2024-01-30 01:23:51,775 INFO     Test HITS@10 at step 149999: 0.287791
+2024-01-30 01:23:51,775 INFO     _instance_hypernym: 
+2024-01-30 01:23:51,775 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:23:51,775 INFO     Test MRR at step 149999: 0.251108
+2024-01-30 01:23:51,775 INFO     Test MR at step 149999: 2446.454918
+2024-01-30 01:23:51,775 INFO     Test HITS@1 at step 149999: 0.159836
+2024-01-30 01:23:51,775 INFO     Test HITS@3 at step 149999: 0.299180
+2024-01-30 01:23:51,775 INFO     Test HITS@10 at step 149999: 0.422131
+2024-01-30 01:23:51,775 INFO     _synset_domain_topic_of: 
+2024-01-30 01:23:51,775 INFO     Test ******* Model Butterfly_bias ****  at step 149999: 1.000000
+2024-01-30 01:23:51,775 INFO     Test MRR at step 149999: 0.280768
+2024-01-30 01:23:51,776 INFO     Test MR at step 149999: 8295.710526
+2024-01-30 01:23:51,776 INFO     Test HITS@1 at step 149999: 0.232456
+2024-01-30 01:23:51,776 INFO     Test HITS@3 at step 149999: 0.307018
+2024-01-30 01:23:51,776 INFO     Test HITS@10 at step 149999: 0.364035

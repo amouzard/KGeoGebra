@@ -35,7 +35,8 @@ Knowledge Graph Data:
  - *relations.dict*: a dictionary map relations to unique ids
  - *train.txt*: the KGE model is trained to fit this data set
  - *valid.txt*: create a blank file if no validation data is available
- - *test.txt*: the KGE model is evaluated on this data set
+ - *test.txt*: the KGE models are evaluated on this data set
+- *X_test.txt*: the KGE models are also evaluated on 9 pattern-specific test data sets. X stands for A, C, S, AC, AS, CS, ACS, UA, UC, and US.
 
 **Train**
 
@@ -50,7 +51,7 @@ CUDA_VISIBLE_DEVICES=0 python -u codes/run.py --do_train \
  -n 256 -b 256 -d 800 \
  -g 6.0 -a 1.0 \
  -lr 0.0001 --max_steps 150000 \
- -save models/EllipsEE_FB15k-237_0 --test_batch_size 16 -de
+ -save models/EllipsE_FB15k-237_0 --test_batch_size 16 -de
 ```
    Check argparse configuration at codes/run.py for more arguments and more details.
 
@@ -58,9 +59,8 @@ CUDA_VISIBLE_DEVICES=0 python -u codes/run.py --do_train \
 
     CUDA_VISIBLE_DEVICES=$GPU_DEVICE python -u $CODE_PATH/run.py --do_test --cuda -init $SAVE
 
-Apart from the test dataset, there are sub-test datasets; and each one of them contains relations with a specific 
-relational property. These datasets are saved in a folder named Test. When the argument --do_sub_test is switched 
-on, the models are evaluated on the sub-test datasets. 
+The sub test datasets are saved in a folder named Test. When the argument --do_sub_test is switched 
+on, the models are evaluated on the sub test datasets. 
 
 **Reproducing the best results**
 

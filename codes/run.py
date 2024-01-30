@@ -14,9 +14,9 @@ import numpy as np
 import torch
 
 from torch.utils.data import DataLoader
-from kgeogebra import KGEModel_Geo
+from kgeogebra import KGEModel
 
-kg = 'KGEModel_Geo'
+#kg = 'KGEModel_Geo'
 
 
 from dataloader import TrainDataset
@@ -270,7 +270,7 @@ def main(args):
     all_true_triples = train_triples + valid_triples + test_triples
 
     if args.model in ['TransE', 'DistMult', 'ComplEx', 'RotatE', 'pRotatE']:
-        kge_model = KGEModel_Geo(
+        kge_model = KGEModel(
             model_name=args.model,
             nentity=nentity,
             nrelation=nrelation,
@@ -280,8 +280,8 @@ def main(args):
             double_relation_embedding=args.double_relation_embedding
         )
 
-    if args.model in ['EllipsE', 'EllipsE_Var', 'Butterfly_bias', 'Butterfly']:
-        kge_model = KGEModel_Geo(
+    if args.model in ['EllipsE', 'EllipsEs', 'ButtErflies', 'ButtErfly']:
+        kge_model = KGEModel(
             model_name=args.model,
             nentity=nentity,
             nrelation=nrelation,

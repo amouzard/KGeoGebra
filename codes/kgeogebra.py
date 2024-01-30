@@ -22,10 +22,10 @@ from dataloader import TestDataset
 from collections import defaultdict
 
 
-class KGEModel_Geo(nn.Module):
+class KGEModel(nn.Module):
     def __init__(self, model_name, nentity, nrelation, hidden_dim, gamma,
                  double_entity_embedding=False, double_relation_embedding=False):
-        super(KGEModel_Geo, self).__init__()
+        super(KGEModel, self).__init__()
         self.model_name = model_name
         self.nentity = nentity
         self.nrelation = nrelation
@@ -52,13 +52,13 @@ class KGEModel_Geo(nn.Module):
         self.relation_dim = hidden_dim * 2 if double_relation_embedding else hidden_dim
         if model_name == "EllipsE":
             self.entity_dim = hidden_dim * 2 if double_entity_embedding else hidden_dim
-        if model_name == "EllipsE_Var":
+        if model_name == "EllipsEs":
             self.entity_dim = hidden_dim * 2 if double_entity_embedding else hidden_dim
             self.relation_dim = hidden_dim * 3 if double_relation_embedding else hidden_dim
-        if model_name in ["Butterfly_bias", "ComplEx"]:
+        if model_name in ["ButtErflies", "ComplEx"]:
             self.entity_dim = hidden_dim * 2 if double_entity_embedding else hidden_dim
             self.relation_dim = hidden_dim * 2 if double_relation_embedding else hidden_dim
-        if model_name == "Butterfly":
+        if model_name == "ButtErfly":
             self.entity_dim = hidden_dim * 2 if double_entity_embedding else hidden_dim
         self.entity_embedding = nn.Parameter(torch.zeros(nentity, self.entity_dim))
         nn.init.uniform_(
@@ -74,11 +74,11 @@ class KGEModel_Geo(nn.Module):
             b=self.embedding_range.item()
         )
 
-        if model_name in ['EllipsE', 'EllipsE_Var', 'Butterfly_bias', 'Butterfly']:
+        if model_name in ['EllipsE', 'EllipsEs', 'ButtErflies', 'ButtErfly']:
             self.ellipse = nn.Parameter(torch.rand((2 * self.hidden_dim)), requires_grad=True)
 
         # Do not forget to modify this line when you add a new model in the "forward" function
-        if model_name not in ['EllipsE', 'EllipsE_Var', 'Butterfly_bias', 'Butterfly', 'RotatE', 'ComplEx', 'TransE', 'DistMult']:
+        if model_name not in ['EllipsE', 'EllipsEs', 'ButtErflies', 'ButtErfly', 'RotatE', 'ComplEx', 'TransE', 'DistMult']:
             raise ValueError('model %s not supported' % model_name)
 
 
@@ -163,9 +163,9 @@ class KGEModel_Geo(nn.Module):
 
         model_func = {
             'EllipsE': self.EllipsE,
-            'EllipsE_Var': self.EllipsE_Var,
-            'Butterfly_bias': self.Butterfly_bias,
-            'Butterfly': self.Butterfly,
+            'EllipsEs': self.EllipsEs,
+            'ButtErflies': self.ButtErflies,
+            'ButtErfly': self.ButtErfly,
             'RotatE': self.RotatE,
             'ComplEx': self.ComplEx,
             'TransE': self.TransE,
@@ -263,7 +263,7 @@ class KGEModel_Geo(nn.Module):
         score = self.gamma.item() - score.sum(dim=2)
         return score
 
-    def EllipsE_Var(self, head, rel1, tail, mode):
+    def EllipsEs(self, head, rel1, tail, mode):
         MIN = 1e-10
         re_head, im_head = torch.chunk(head, 2, dim=2)
         re_tail, im_tail = torch.chunk(tail, 2, dim=2)
@@ -285,7 +285,7 @@ class KGEModel_Geo(nn.Module):
         score = self.gamma.item() - score.sum(dim=2)
         return score
 
-    def Butterfly(self, head, rel, tail, mode):
+    def ButtErfly(self, head, rel, tail, mode):
         # Embeds entities in standard complex space and relation on butterflies. From the relation angle,
         # the butterfly polar equation are used to find relation radius.
         # Relations become standard complex numbers and multiply the heads.
@@ -307,7 +307,7 @@ class KGEModel_Geo(nn.Module):
         score = self.gamma.item() - score.sum(dim=2)
         return score
 
-    def Butterfly_bias(self, head, rel, tail, mode):
+    def ButtErflies(self, head, rel, tail, mode):
         # Embeds entities in standard complex space and relation on butterflies.
         MIN = 1e-10
         re_head, im_head = torch.chunk(head, 2, dim=2)

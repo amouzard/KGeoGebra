@@ -1,0 +1,16 @@
+1.10.2
+Start Evaluation on Test Data Set......
+2024-01-30 01:18:39,039 INFO     Model: Butterfly_bias
+2024-01-30 01:18:39,040 INFO     Data Path: data/youtube
+2024-01-30 01:18:39,040 INFO     #entity: 2000
+2024-01-30 01:18:39,040 INFO     #relation: 5
+2024-01-30 01:18:41,163 INFO     #train: 1114025
+2024-01-30 01:18:41,284 INFO     #valid: 65512
+2024-01-30 01:18:41,525 INFO     #test: 131007
+Traceback (most recent call last):
+  File "codes/run.py", line 495, in <module>
+    main(parse_args())
+  File "codes/run.py", line 270, in main
+    filelist = os.listdir(filepath)
+FileNotFoundError: [Errno 2] No such file or directory: 'data/youtube/test/'
+srun: error: clara06: task 0: Exited with exit code 1
