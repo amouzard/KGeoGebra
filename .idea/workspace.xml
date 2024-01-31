@@ -3,51 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="917fcefc-5c99-4639-ace5-da431c44f0f4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0/config.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/kgeogebra.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/kgeogebra.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ellipses/Butterfly_bias_FB15k-237_BuBFB/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ellipses/Butterfly_bias_youtube_BuBYT/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ellipses/EllipsE_Var_FB15k-237_ElVFB/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ellipses/EllipsE_Var_youtube_ElVYT/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Butterfly_bias_FB15k-237_BuBFB/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Butterfly_bias_wn18rr_BuBWR2/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Butterfly_bias_youtube_BuBYT/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/EllipsE_Var_FB15k-237_ElVFB/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/EllipsE_Var_wn18rr_ElVWR2/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/EllipsE_Var_youtube_ElVYT/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns2_7949498.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns2_7949499.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns2_7949500.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns2_7949501.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns2_7949503.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns2_7949504.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949474.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949475.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949476.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949477.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949478.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949480.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949483.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949484.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949485.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949486.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949487.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949488.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949489.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out_patterns/Elps_patterns_7949490.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237Butterfly_bias.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237Butterfly_bias.gsheet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237EllipsE_Var.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237EllipsE_Var.gsheet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237TransE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/triples_ranked_FB15k-237TransE.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrButterfly_bias.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrButterfly_bias.gsheet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrEllipsE_Var.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/triples_ranked_youtubeButterfly_bias.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/triples_ranked_youtubeEllipsE_Var.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrButtErflies.csv" beforeDir="false" afterPath="$PROJECT_DIR$/triples_ranked_wn18rrButtErflies.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrEllipsEs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/triples_ranked_wn18rrEllipsEs.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

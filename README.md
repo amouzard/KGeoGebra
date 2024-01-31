@@ -73,7 +73,7 @@ The run.sh script provides an easy way to search hyper-parameters:
 The python libarary is organized around 3 objects:
 
  - TrainDataset (dataloader.py): prepare data stream for training
- - TestDataSet (dataloader.py): prepare data stream for evluation
+ - TestDataSet (dataloader.py): prepare data stream for evaluation
  - KGEModel (model.py): calculate triple score and provide train/test API
 
 The run.py file contains the main function, which parses arguments, reads data, initilize the model and provides the training loop.
