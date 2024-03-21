@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="917fcefc-5c99-4639-ace5-da431c44f0f4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrButtErflies.csv" beforeDir="false" afterPath="$PROJECT_DIR$/triples_ranked_wn18rrButtErflies.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrEllipsE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/triples_ranked_wn18rrEllipsE.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrEllipsEs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/triples_ranked_wn18rrEllipsEs.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
