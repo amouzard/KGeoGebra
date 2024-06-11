@@ -5,7 +5,6 @@ python -u -c 'import torch; print(torch.__version__)'
 CODE_PATH=codes
 DATA_PATH=data
 SAVE_PATH=models
-#cmd.exe  "/K"  "C:\Users\kossi\Miniconda3\Scripts\activate.bat"  "C:\Users\kossi\Miniconda3"
 #The first four parameters must be provided
 MODE=$1
 MODEL=$2
