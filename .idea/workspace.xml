@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="22f8544c-61cd-4d68-9dc7-69446f33fbbf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pattern Evaluations.gsheet" beforeDir="false" afterPath="$PROJECT_DIR$/Pattern Evaluations.gsheet" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/codes/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237ButtErflies.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237ButtErflies.gsheet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237Butterfly.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237Butterfly.gsheet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237ComplEx.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237DistMult.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237EllipsE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237EllipsE.gsheet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237EllipsEs.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237EllipsEs.gsheet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237RotatE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237RotatE.gsheet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_FB15k-237TransE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrButtErflies.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrButtErflies.gsheet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrButterfly.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrButterfly.gsheet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrComplEx.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrComplEx.gsheet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrDistMult.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrEllipsE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrEllipsEs.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrRotatE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_wn18rrTransE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_youtubeButtErflies.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_youtubeButterfly.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_youtubeEllipsE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triples_ranked_youtubeEllipsEs.csv" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2hj3c1MCdWejywPbsTt5DQTeK4o" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/kossi"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22f8544c-61cd-4d68-9dc7-69446f33fbbf" name="Changes" comment="" />
+      <created>1718093734256</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718093734256</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
